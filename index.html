@@ -1,229 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-    <meta content="always" name="referrer" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta content="yes" name="apple-mobile-web-app-capable" />
-    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
-    <meta content="telephone=no" name="format-detection" />
-    <link href="css/index.041915d5f11c7df3009d.css" rel="stylesheet" />
-    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,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" type="image/x-icon" />
-    <link rel="apple-touch-icon" href="assets/img/icon256.png?8c4d3b696a887be4c125daedb376fa71" />
-    <title>莹莹</title>
-    <link rel="stylesheet" href="//cdn.staticfile.org/animate.css/3.7.0/animate.min.css" />
-    <script src="//cdn.staticfile.org/prefixfree/1.0.7/prefixfree.min.js"></script>
-    <script src="//cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
-    <script src="//cdn.staticfile.org/device.js/0.2.7/device.min.js"></script>
-    <script src="//cdn.staticfile.org/modernizr/2.8.3/modernizr.min.js"></script>
-    <script src="//cdn.staticfile.org/vue/2.2.6/vue.min.js"></script>
-</head>
-<body>
-<header :class="{'menu-hover':expandNav,'on-top':scrollTop&lt;=wh-300,'in-content':scrollTop&gt;wh-300}">
-    <div class="limit">
-        <a href="#"><img id="logo" src="assets/img/header-logo.png?1f7e6681ffce69c7c2fad38d5b1812ed" /></a>
-        <div id="icon-menu" @click="iconMenuClick">
-            <section class="mod">
-                <div class="menu-button" :class="{'menu-hover':expandNav}">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </section>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="keywords"
+      content="antd,umi,umijs,实地邻里,脚手架,布局, 实地邻里,项目,Pro,admin,控制台,主页,开箱即用,中后台,解决方案,组件库"
+    />
+    <meta
+      name="description"
+      content="
+    An out-of-box UI solution for enterprise applications as a React boilerplate."
+    />
+    <meta
+      name="description"
+      content="
+      开箱即用的中台前端/设计解决方案。"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>陈路遥</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/umi.9372b12a.css" />
+    <script>
+      window.routerBase = "/";
+    </script>
+    <script>
+      //! umi version: 3.2.24
+    </script>
+  </head>
+  <body>
+    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
+    <div id="root">
+      <style>
+        html,
+        body,
+        #root {
+          height: 100%;
+          margin: 0;
+          padding: 0;
+        }
+        #root {
+          background-image: url("/home_bg.png");
+          background-repeat: no-repeat;
+          background-size: 100% auto;
+        }
+        .page-loading-warp {
+          padding: 98px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .ant-spin {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          color: rgba(0, 0, 0, 0.65);
+          font-size: 14px;
+          font-variant: tabular-nums;
+          line-height: 1.5;
+          list-style: none;
+          -webkit-font-feature-settings: "tnum";
+          font-feature-settings: "tnum";
+          position: absolute;
+          display: none;
+          color: #1890ff;
+          text-align: center;
+          vertical-align: middle;
+          opacity: 0;
+          -webkit-transition: -webkit-transform 0.3s
+            cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: -webkit-transform 0.3s
+            cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
+            -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+        }
+
+        .ant-spin-spinning {
+          position: static;
+          display: inline-block;
+          opacity: 1;
+        }
+
+        .ant-spin-dot {
+          position: relative;
+          display: inline-block;
+          font-size: 20px;
+          width: 20px;
+          height: 20px;
+        }
+
+        .ant-spin-dot-item {
+          position: absolute;
+          display: block;
+          width: 9px;
+          height: 9px;
+          background-color: #1890ff;
+          border-radius: 100%;
+          -webkit-transform: scale(0.75);
+          -ms-transform: scale(0.75);
+          transform: scale(0.75);
+          -webkit-transform-origin: 50% 50%;
+          -ms-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+          opacity: 0.3;
+          -webkit-animation: antSpinMove 1s infinite linear alternate;
+          animation: antSpinMove 1s infinite linear alternate;
+        }
+
+        .ant-spin-dot-item:nth-child(1) {
+          top: 0;
+          left: 0;
+        }
+
+        .ant-spin-dot-item:nth-child(2) {
+          top: 0;
+          right: 0;
+          -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+        }
+
+        .ant-spin-dot-item:nth-child(3) {
+          right: 0;
+          bottom: 0;
+          -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+        }
+
+        .ant-spin-dot-item:nth-child(4) {
+          bottom: 0;
+          left: 0;
+          -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+        }
+
+        .ant-spin-dot-spin {
+          -webkit-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+          -webkit-animation: antRotate 1.2s infinite linear;
+          animation: antRotate 1.2s infinite linear;
+        }
+
+        .ant-spin-lg .ant-spin-dot {
+          font-size: 32px;
+          width: 32px;
+          height: 32px;
+        }
+
+        .ant-spin-lg .ant-spin-dot i {
+          width: 14px;
+          height: 14px;
+        }
+
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          .ant-spin-blur {
+            background: #fff;
+            opacity: 0.5;
+          }
+        }
+
+        @-webkit-keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @keyframes antSpinMove {
+          to {
+            opacity: 1;
+          }
+        }
+
+        @-webkit-keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+
+        @keyframes antRotate {
+          to {
+            -webkit-transform: rotate(405deg);
+            transform: rotate(405deg);
+          }
+        }
+      </style>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          min-height: 420px;
+          height: 100%;
+        "
+      >
+        <div class="page-loading-warp">
+          <div class="ant-spin ant-spin-lg ant-spin-spinning">
+            <span class="ant-spin-dot ant-spin-dot-spin"
+              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
+              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
+            ></span>
+          </div>
         </div>
-        <nav :class="{'always-shown':ww&gt;800}" :style="navStyle">
-            <ul id="text-menu">
-                <li class="menu-item" :class="navLiClass1"><a href="javascript:void(0)" @click.prevent="navTo(0)"><span class="zh sy-xi">首页</span><span class="en sy-zhengcu">HOME</span></a></li>
-                <li class="menu-item" :class="navLiClass3"><a href="javascript:void(0)" @click.prevent="navTo(1)"><span class="zh sy-xi">介绍</span><span class="en sy-zhengcu">ABOUT ME</span></a></li>
-                <li class="menu-item" :class="navLiClass2"><a href="javascript:void(0)" @click.prevent="navTo(2)"><span class="zh sy-xi">展示</span><span class="en sy-zhengcu">SHOW</span></a></li>
-                <li class="menu-item" :class="navLiClass4"><a href="javascript:void(0)" @click.prevent="navTo(4)"><span class="zh sy-xi">联系</span><span class="en sy-zhengcu">CONTACT</span></a></li>
-            </ul>
-        </nav>
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          陈路遥
+        </div>
+      </div>
     </div>
-</header>
-<article>
-    <div id="video-container" :style="whStyle">
-        <canvas v-if="isMobile &amp;&amp; canPlayCanvas" id="bg-canvas" :width="inner_ww" :height="wh"></canvas>
-        <video v-if="!isMobile &amp;&amp; canPlayVideo" id="bg-video" :style="bgVideoStyle" src="assets/video/banner.mp4?20bc5bb8011845a0ee53b101286d6fe1" loop="" muted="" preload="none" @loadedmetadata="bgVideoInit" @progress="bgVideoLoadProgress"></video>
-    </div>
-    <section id="screen1" :style="[whStyle,screen1Style]">
-        <div class="limit">
-            <div class="left sy-jixi">
-                <div class="animate">
-                    <img id="stick" src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEzIDQ2Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6bm9uZTtzdHJva2U6I2I1OTE2ZjtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2Utd2lkdGg6MC43NXB4O308L3N0eWxlPjwvZGVmcz48dGl0bGU+5Zu+5qCH5YiH5Zu+PC90aXRsZT48bGluZSBjbGFzcz0iY2xzLTEiIHgxPSI2LjUiIHkxPSIzIiB4Mj0iNi41IiB5Mj0iNDQiLz48L3N2Zz4=" />
-                    <img id="egg" src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDEzIDEzIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2I1OTE2Zjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPuWbvuagh+WIh+WbvjwvdGl0bGU+PGNpcmNsZSBjbGFzcz0iY2xzLTEiIGN4PSI2LjUiIGN5PSI2LjUiIHI9IjYuNSIvPjwvc3ZnPg==" />
-                </div>
-                <p class="en">Scroll down</p>
-                <p class="zh">下 滑</p>
-            </div>
-            <div class="right" @mouseenter="screen1_right_hover=true" @mouseleave="screen1_right_hover=false">
-                <div>
-                    <a href="javascript:void(0)" @click.prevent="navTo(1)"><span class="en sy-cu">It's Time</span> <span class="zh sy-jixi">更多<img class="right-arrow" :class="{'move':!isMobileView &amp;&amp; screen1_right_hover}" src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMzIDE1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2I1OTE2ZjtmaWxsLXJ1bGU6ZXZlbm9kZDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPueureWktDwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjMyLjIgMS4wNiAxNi41NCAxMy42IDAuODcgMS4wNiAzMi4yIDEuMDYgMzIuMiAxLjA2Ii8+PC9zdmc+" /></span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="about-us">
-        <div class="border">
-            <div class="title">
-                <h1 class="sy-cu">自我介绍</h1>
-                <p class="sy-zhengcu">ABOUT ME</p>
-            </div>
-            <img class="photo" src="assets/img/me.jpg?bf6553462d42698ef7e1d9f7e9dc1903" :class="{'animated tada':about_us_photo_active || aboutUsActiveFirstTime}" @mouseenter="about_us_photo_active=true" @mouseleave="about_us_photo_active=false" />
-            <div class="text can-select sy-putong">
-                <div class="content">
-                    <p>美丽的同学。</p>
-                    <p class="last-but-one-p" :style="aboutUsTextLastButOnePStyle">工作室工作涉及视频前后期制作、平面宣传制作、摄影、室内设计、网页设计、程序设计等方面，始终以专业作为工作室的主旨。</p>
-                    <p class="last-p" :style="aboutUsTextLastPStyle">我们的能力和专业素养还体现在我们所做的项目中。我们承接过东华大学组织的2014年首届时尚传播与社会发展国际论坛、和2015年时尚传媒高峰论坛的全套视觉设计、视频制作工作，还曾与戴尔、中国平安、事农、日本村田制作所、wacom、上海普瑞玛激光设备有限公司、上海佘山青少年活动基地等公司和单位有过项目合作。</p>
-                    <div v-if="isMobileView" class="bottom-arrow" :style="aboutUsArrowStyle" @click.prevent="aboutUsTextArrowClick">
-                        <img src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMzIDE1Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2I1OTE2ZjtmaWxsLXJ1bGU6ZXZlbm9kZDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPueureWktDwvdGl0bGU+PHBvbHlnb24gY2xhc3M9ImNscy0xIiBwb2ludHM9IjMyLjIgMS4wNiAxNi41NCAxMy42IDAuODcgMS4wNiAzMi4yIDEuMDYgMzIuMiAxLjA2Ii8+PC9zdmc+" :style="aboutUsArrowImgStyle" />
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="contact">
-        <div class="bg">
-            <div class="max-limit"></div>
-        </div>
-    </section>
-    <section id="artworks">
-        <div class="limit">
-            <div class="title">
-                <h1 class="sy-cu">展示</h1>
-                <p class="sy-zhengcu">SHOW</p>
-            </div>
-            <div class="title-p sub-title">
-                <div class="title">
-                    <h1 class="sy-cu">图片</h1>
-                    <p class="sy-zhengcu">PICTURE</p>
-                </div>
-            </div>
-            <div class="level1 sy-changgui">
-                <a href="" class="artwork artwork-1 level2"><span class="content-frame"><img src="assets/img/artwork-1.jpg?14a6e960a1d6ca53d68111e8306542da" />
-        <video id="artwork-1-video" v-if="!canPlayBodymovin &amp;&amp; !isMobile &amp;&amp; canPlayVideo" :class="{'hide':!isTablet}" src="assets/video/artwork-1.mp4?d038c24747d029a2a607fa9c6b314b2c" poster="assets/img/artwork-1.jpg?14a6e960a1d6ca53d68111e8306542da" preload="none" loop="" muted="" @loadedmetadata="artworkVideoInit(0,$event)" @progress="artworkVideoLoadProgress(0,$event)"></video><span v-if="canPlayBodymovin" class="svg-animation svg-animation-2"></span> <span v-if="canPlayBodymovin" class="svg-animation svg-animation-1"></span> </span><span v-if="!canPlayBodymovin &amp;&amp; canPlayVideo" class="video-progress" :style="{width:artwork_video_progress[0]+'%'}"></span> <span><span class="artist">HEYIYUN</span><span class="title">GO PRO 可视化音乐</span></span></a>
-                <div class="level2">
-                    <a href="" class="artwork artwork-2 level3"><span class="content-frame"><img src="assets/img/artwork-2.jpg?9ec5599615d8c1b04e923bd7fffcd930" />
-         <video id="artwork-2-video" v-if="!isMobile &amp;&amp; canPlayVideo" :class="{'hide':!isTablet}" src="assets/video/artwork-2.mp4?96c194db7ed9053e4b48a888c6e44be6" loop="" muted="" preload="none" @loadedmetadata="artworkVideoInit(1,$event)" @progress="artworkVideoLoadProgress(1,$event)"></video>
-                        <!--poster="../../assets/img/artwork-2.jpg"--> </span><span class="video-progress" :style="{width:artwork_video_progress[1]+'%'}"></span> <span><span class="artist">HEYIYUN</span><span class="title">吉利汽车UI效果动画</span></span></a>
-                    <div class="level3">
-                        <a href="#" class="artwork artwork-3 level4"><span class="content-frame"><img src="assets/img/artwork-3.jpg?d4aaae03763f46ee6bd5443bb85d9e73" /> </span><span><span class="artist">YUTONG</span><span class="title">圣诞贺卡设计</span></span> </a>
-                        <a href="#" class="artwork artwork-4 level4"><span class="content-frame"><img src="assets/img/artwork-4.jpg?00cfc53ad6b5573fd3a90a4314a5c4da" /> </span><span><span class="artist">CORDEN</span><span class="title">ROOMIN杂志设计</span></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="more more-below">
-                <a href="#"><img src="data:image/svg+xml;base64,PHN2ZyBpZD0i5Zu+5bGCXzEiIGRhdGEtbmFtZT0i5Zu+5bGCIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDQ5IDQ5Ij48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2I1OTE2Zjt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPuWbvuagh+WIh+WbvjwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB4PSI3LjYzIiB5PSIzNi4yMSIgd2lkdGg9IjYuNjIiIGhlaWdodD0iNi42MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTI4LjU4IDUwLjQ2KSByb3RhdGUoLTkwKSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iNy42MyIgeT0iMjEuMTciIHdpZHRoPSI2LjYyIiBoZWlnaHQ9IjYuNjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0xMy41NCAzNS40Mikgcm90YXRlKC05MCkiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjcuNjMiIHk9IjYuMTMiIHdpZHRoPSI2LjYyIiBoZWlnaHQ9IjYuNjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDEuNSAyMC4zOSkgcm90YXRlKC05MCkiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjIxLjg4IiB5PSIzNi4yMSIgd2lkdGg9IjYuNjIiIGhlaWdodD0iNi42MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE0LjMzIDY0LjcxKSByb3RhdGUoLTkwKSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMjEuODgiIHk9IjIxLjE3IiB3aWR0aD0iNi42MiIgaGVpZ2h0PSI2LjYyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwLjcxIDQ5LjY3KSByb3RhdGUoLTkwKSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMjEuODgiIHk9IjYuMTMiIHdpZHRoPSI2LjYyIiBoZWlnaHQ9IjYuNjIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDE1Ljc0IDM0LjYzKSByb3RhdGUoLTkwKSIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMzUuMzQiIHk9IjM2LjIxIiB3aWR0aD0iNi42MiIgaGVpZ2h0PSI2LjYyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC44NyA3OC4xOCkgcm90YXRlKC05MCkiLz48cmVjdCBjbGFzcz0iY2xzLTEiIHg9IjM1LjM0IiB5PSIyMS4xNyIgd2lkdGg9IjYuNjIiIGhlaWdodD0iNi42MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMTQuMTcgNjMuMTQpIHJvdGF0ZSgtOTApIi8+PHJlY3QgY2xhc3M9ImNscy0xIiB4PSIzNS4zNCIgeT0iNi4xMyIgd2lkdGg9IjYuNjIiIGhlaWdodD0iNi42MiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMjkuMjEgNDguMSkgcm90YXRlKC05MCkiLz48L3N2Zz4=" /><span class="sy-cu">更多作品</span></a>
-            </div>
-        </div>
-    </section>
-    <section id="team">
-        <div class="limit">
-            <div class="title-p">
-                <div class="title">
-                    <h1 class="sy-cu">视频</h1>
-                    <p class="sy-zhengcu">VIDEO</p>
-                </div>
-            </div>
-            <div class="members" @mouseenter="members_mouse_enter" @mouseleave="members_mouse_leave">
-                <div class="member-container">
-                    <div id="team-block" :style="teamBlockStyle">
-                        <div class="fill">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                    <div class="member" :class="memberClass[0]" @mouseenter="member_mouse_enter(0)" @click.prevent="member_click(0)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">aa</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">画平面，做后期，不会摄影的制片不是好导演。爱玩，逗逼，口活不好的设计师不是好boss。你不仅在白天能被我催稿，晚上还能听见“毙了，改”。我不是边城里的狗狗但是我也叫大黄。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="member-container">
-                    <div class="member" :class="memberClass[1]" @mouseenter="member_mouse_enter(1)" @click.prevent="member_click(1)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">bb</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">爱搞事的闲散青年，经常参与校内外大大小小的有逼格的项目，作品高产质量优秀。兴趣广泛，善于行动，热爱生活，精通二次元。曾在工作室勤勤恳恳带领新人，被大家誉为何老师。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="member-container">
-                    <div class="member" :class="memberClass[2]" @mouseenter="member_mouse_enter(2)" @click.prevent="member_click(2)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">cc</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">资深驴友，走南闯北，摄影好手，电影爱好者。平面设计、版式设计等专业技能一流。在何老师之后带领新人做项目、做指导，技术老练，经验丰富。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="member-container">
-                    <div class="member" :class="memberClass[3]" @mouseenter="member_mouse_enter(3)" @click.prevent="member_click(3)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">cc</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">艺术范十足的妹子，美术功底扎实，Logo、海报、版式、广告设计样样不虚，平面设计和视频后期项目经验丰富。表面波澜不惊，实则非常少女心。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="member-container">
-                    <div class="member" :class="memberClass[4]" @mouseenter="member_mouse_enter(4)" @click.prevent="member_click(4)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">qq</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">本网站的开发者，在媒体专业点错技能树终成程序员。拥有程序员招牌直男性格，擅长Web前端开发、.NET开发、平面设计。黑白漫画和剑道爱好者。</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="member-container">
-                    <div class="member" :class="memberClass[5]" @mouseenter="member_mouse_enter(5)" @click.prevent="member_click(5)">
-                        <img src="assets/img/member-sprites.jpg?bfcf62bf69b3479f4bb186e998ebeb99" />
-                        <div class="detail">
-                            <h2 class="sy-cu">zz</h2>
-                            <div class="line"></div>
-                            <p class="sy-putong">本网站的设计师，性格踏实认真，业务能力可靠，擅长平面设计和视频后期制作。负责指导后届工作室成员的项目实践工作，工作室新一任“包工头”。</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="clear"></div>
-        </div>
-    </section>
-    <section id="contact">
-        <div class="bg">
-            <div class="max-limit"></div>
-        </div>
-    </section>
-</article>
-<footer></footer>
-<script type="text/javascript" src="js/index.041915d5f11c7df3009d.bundle.js"></script>
-</body>
+
+    <script src="/umi.adac69f2.js"></script>
+  </body>
 </html>
