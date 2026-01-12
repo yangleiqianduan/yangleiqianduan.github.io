@@ -4,32 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>杨波 - 兼职教师简历</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
+/* 内嵌字体 - Orbitron */
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(data:font/woff2;base64,d09GMgABAAAAABXsAA4AAAAALBgAABWVAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgQocgRAGYACCUBEICrFkplsLgR4AATYCJAOCDAQgBYQoByAMBxvIJFGUblYG2YcBbh5RpBxbFotNHIz/TwY3hlJYFbqwNhjCi2Jx6Fb7/v9/pckxFG/YgaI9pAd0s5YwZ6ahEz9xSaLjd2b2e0Vy4lCixBE4cRQJEqcSdQkSJ0qcukSdTlySTlySLk6pS5c4cUqcusSpy/+3dPbb/w9YMdMbIURMkZgiy1ohkZDIirJCIishsqKssBKWCImVkBUSWSEhKyQkVkLIConEVhISq+z5LwYX9qb6CrFPTCAkFgBdgJ8cqXVdZ1vPJDaAFXNl98x5i1+g/wBcBYIKKGDFbFf9mzM9fQLLAK1bHUe9pwT+wS4rPp8GFBR+sAN/xpuLdPPRBKCKYJNQBzjBHW5Bw5mJEEGcJklRKnGp0k2Kco1LBQmKKEisgwCJdZAgsQ4SJNZBgsQ6SJBYBwkS6yChXDgd5RI6yiVylMvmKJfHUS6Loxz/KMc3ynGMcryiHJcoxzHKoY9y6KIcqiiHJsqhp1yMKBdHucRRLnmUSxnlMka5rFEuZ5TLHeXyRrmCUa5olCse5cpGuRpRrn6UaxLl2ka5jlGuW5TrE+V6R7mBUW50lJsY5WZGuSVRbnWU2xrl9ke546a5m6e5l6e516e5j6e5r6e5v6d5oKd5sKd5qKd5uKd5pKd5jKd5nKd5gqd5kqd5qqd5mqd5hqd5lqd5tqd5rqd5vqd5oSfZqJtivGq+z4xmvMiTYoJGCp8RHfKk8p6ER0fHaB3pSY9uaPp0w1MGDQAA) format('woff2');
+}
+@font-face {
+    font-family: 'Orbitron';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(data:font/woff2;base64,d09GMgABAAAAABYAAA4AAAAALGAAABWnAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGhYbgQwcgRAGYACCUBEICrJwp2QLgR4AATYCJAOCDAQgBYQoByAMBxvMJFGUblYG2UcBHjhFhBybFotNHPz/TwY3hjJYFXpibDCEF8XioK32/f//SpNjKN6wA0V7SA/oZi1hzkxDJ37ikkTH78zs94rkxKFEiSNw4igSJE4l6hIkTpQ4dYk6nbgknbgkXZxSly5x4pQ4dYlTl/9v6ey3/x+wYqY3QoiYIjFFlrVCIiGRFWWFRFZCZEVZYSUsEBIrIbJCIiskZIWExEoIWSGR2EpCYpU9/8Xgwt5UXyH2iQmExAKgC/CTI7Wu62zrmcQGsGKu7J45b/EL9B+AqwBUQAUrZrvq35zp6RNYBmjd6jjqPSXwD3ZZ8fk0oKDwgx34M95cpJuPJgBVBJuEOsAJ7nALGs5MhAjiNEmKUolLlW5SlGtcKkhQREFiHQRIrIMEiXWQILEOEiTWQYLEOkiQUC6cjnIJHeUSOcplc5TL4yiXxVGOf5TjG+U4RjleUY5LlOMY5dBHOXRRDlWUQxPl0FMuRpSLo1ziKJc8yqWMchmjXNYolzPK5Y5y+aNcwShXNMoVj3Jlo1yNKFc/yjWJcm2jXMco1y3K9YlyvaP cwKg3OgpNzHKzYxyS6Lc6ii3NcrtN83dPM29PM29Ps19PM19Pc39Pc0DPc2DPc1DPc3DPc0jPc1jPM3jPM0TPM2TPM1TPc3TPs3zPM+zPM9zPc9zPcvzPMfzPMvzPMcT7NdNMV41X2dGM17kSTFBIYXPiA55UnlPwqOjY7SO9KRHN7R9uuEpgwY=) format('woff2');
+}
+/* 内嵌字体 - Noto Sans SC (使用系统中文字体作为后备) */
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: local('Noto Sans SC Light'), local('NotoSansSC-Light'), local('PingFang SC Light'), local('Microsoft YaHei Light');
+}
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Noto Sans SC'), local('NotoSansSC-Regular'), local('PingFang SC'), local('Microsoft YaHei');
+}
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: local('Noto Sans SC Medium'), local('NotoSansSC-Medium'), local('PingFang SC Medium'), local('Microsoft YaHei');
+}
+@font-face {
+    font-family: 'Noto Sans SC';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: local('Noto Sans SC Bold'), local('NotoSansSC-Bold'), local('PingFang SC Semibold'), local('Microsoft YaHei Bold');
+}
+
+/* 内联图标样式 */
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.125em;
+    fill: currentColor;
+}
+.icon svg {
+    width: 100%;
+    height: 100%;
+}
 /* ========================================
    杨波 - 兼职教师简历样式表
    设计风格：科技感 + 专业教育气质
    ======================================== */
 
-/* CSS 变量定义 */
+/* CSS 变量定义 - iOS 26风格 */
 :root {
-    --primary-color: #0a192f;
-    --primary-light: #112240;
-    --primary-dark: #020c1b;
-    --accent-color: #64ffda;
-    --accent-secondary: #7b68ee;
-    --neon-blue: #00d4ff;
-    --neon-purple: #bd00ff;
-    --text-dark: #ccd6f6;
-    --text-medium: #8892b0;
-    --text-light: #a8b2d1;
-    --bg-light: #0a192f;
-    --bg-white: #112240;
-    --border-color: #233554;
-    --success-color: #64ffda;
+    --primary-color: #1a1a2e;
+    --primary-light: #16213e;
+    --primary-dark: #0f0f1a;
+    --accent-color: #00ffc8;
+    --accent-secondary: #00b4d8;
+    --neon-blue: #4cc9f0;
+    --neon-cyan: #00f5d4;
+    --text-dark: #e8f4f8;
+    --text-medium: #a0b3c6;
+    --text-light: #8899a6;
+    --bg-light: #1a1a2e;
+    --bg-white: #16213e;
+    --border-color: #2a3f5f;
+    --success-color: #00ffc8;
     --sidebar-width: 300px;
-    --glow-color: rgba(100, 255, 218, 0.3);
+    --glow-color: rgba(0, 255, 200, 0.35);
+    --glass-bg: rgba(26, 26, 46, 0.55);
+    --glass-bg-strong: rgba(26, 26, 46, 0.75);
+    --glass-border: rgba(0, 255, 200, 0.12);
+    --glass-border-hover: rgba(0, 255, 200, 0.25);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --shadow-glow: rgba(0, 255, 200, 0.2);
 }
 
 /* 重置样式 */
@@ -41,7 +104,9 @@
 
 body {
     font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--primary-dark);
+    background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 25%, #0d1b2a 50%, #1a1a2e 75%, #0f0f1a 100%);
+    background-size: 400% 400%;
+    animation: bgColorShift 15s ease infinite;
     min-height: 100vh;
     padding: 40px 20px;
     line-height: 1.6;
@@ -50,7 +115,14 @@ body {
     overflow-x: hidden;
 }
 
-/* 科技感背景 */
+@keyframes bgColorShift {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+}
+
+/* 科技感背景 - 动态渐变光晕 */
 .tech-bg {
     position: fixed;
     top: 0;
@@ -59,6 +131,42 @@ body {
     height: 100%;
     pointer-events: none;
     z-index: 0;
+    overflow: hidden;
+}
+
+/* 流动光晕效果 */
+.tech-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(ellipse 600px 600px at 20% 30%, rgba(0, 255, 200, 0.08) 0%, transparent 50%),
+        radial-gradient(ellipse 500px 500px at 80% 70%, rgba(76, 201, 240, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 400px 400px at 60% 20%, rgba(0, 245, 212, 0.05) 0%, transparent 50%);
+    animation: auroraMove 20s ease-in-out infinite;
+}
+
+.tech-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(ellipse 500px 500px at 70% 80%, rgba(0, 180, 216, 0.06) 0%, transparent 50%),
+        radial-gradient(ellipse 450px 450px at 30% 60%, rgba(0, 255, 200, 0.05) 0%, transparent 50%);
+    animation: auroraMove 25s ease-in-out infinite reverse;
+}
+
+@keyframes auroraMove {
+    0%, 100% { transform: translate(0, 0) rotate(0deg); }
+    25% { transform: translate(5%, 3%) rotate(1deg); }
+    50% { transform: translate(0%, 5%) rotate(0deg); }
+    75% { transform: translate(-5%, 2%) rotate(-1deg); }
 }
 
 .grid-lines {
@@ -66,15 +174,15 @@ body {
     width: 100%;
     height: 100%;
     background-image: 
-        linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
-    animation: gridMove 20s linear infinite;
+        linear-gradient(rgba(0, 255, 200, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 200, 0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: gridMove 25s linear infinite;
 }
 
 @keyframes gridMove {
     0% { transform: translate(0, 0); }
-    100% { transform: translate(50px, 50px); }
+    100% { transform: translate(60px, 60px); }
 }
 
 .floating-particles {
@@ -85,13 +193,27 @@ body {
 
 .floating-particles span {
     position: absolute;
-    width: 4px;
-    height: 4px;
+    width: 3px;
+    height: 3px;
     background: var(--accent-color);
     border-radius: 50%;
-    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
-    animation: float 15s infinite;
-    opacity: 0.6;
+    box-shadow: 
+        0 0 6px var(--accent-color), 
+        0 0 12px var(--accent-color),
+        0 0 20px rgba(0, 255, 200, 0.3);
+    animation: float 15s infinite, colorPulse 4s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+@keyframes colorPulse {
+    0%, 100% { 
+        background: var(--accent-color);
+        box-shadow: 0 0 6px var(--accent-color), 0 0 12px var(--accent-color);
+    }
+    50% { 
+        background: var(--neon-cyan);
+        box-shadow: 0 0 8px var(--neon-cyan), 0 0 16px var(--neon-cyan);
+    }
 }
 
 .floating-particles span:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
@@ -107,38 +229,72 @@ body {
 
 @keyframes float {
     0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
-    10% { opacity: 0.6; }
-    90% { opacity: 0.6; }
+    10% { opacity: 0.7; }
+    90% { opacity: 0.7; }
     100% { transform: translateY(-100vh) scale(1); opacity: 0; }
 }
 
-/* 简历容器 */
+/* 简历容器 - iOS 26风格玻璃磨砂效果 */
 .resume-container {
     max-width: 1100px;
     margin: 0 auto;
     display: flex;
-    background: var(--bg-white);
-    border-radius: 20px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.65) 0%, 
+        rgba(22, 33, 62, 0.55) 50%,
+        rgba(26, 26, 46, 0.6) 100%);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border-radius: 32px;
     overflow: hidden;
     box-shadow: 
-        0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px var(--border-color),
-        0 0 40px rgba(100, 255, 218, 0.1);
+        0 32px 64px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(255, 255, 255, 0.08),
+        0 0 120px rgba(0, 255, 200, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: containerGlow 8s ease-in-out infinite;
+}
+
+@keyframes containerGlow {
+    0%, 100% { 
+        box-shadow: 
+            0 32px 64px -12px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.08),
+            0 0 80px rgba(0, 255, 200, 0.05),
+            inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    50% { 
+        box-shadow: 
+            0 32px 64px -12px rgba(0, 0, 0, 0.5),
+            0 0 0 1px rgba(255, 255, 255, 0.1),
+            0 0 120px rgba(76, 201, 240, 0.08),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    }
 }
 
 /* ========================================
-   左侧边栏
+   左侧边栏 - iOS 26风格玻璃磨砂效果
    ======================================== */
 .sidebar {
     width: var(--sidebar-width);
-    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.85) 0%, 
+        rgba(22, 33, 62, 0.9) 50%,
+        rgba(15, 15, 26, 0.95) 100%);
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
     color: var(--text-dark);
     padding: 40px 24px;
     flex-shrink: 0;
-    border-right: 1px solid var(--border-color);
+    border-right: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
+    box-shadow: 
+        4px 0 30px rgba(0, 0, 0, 0.25),
+        inset -1px 0 0 rgba(255, 255, 255, 0.05);
 }
 
 .sidebar::before {
@@ -146,10 +302,41 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1px;
+    width: 2px;
     height: 100%;
-    background: linear-gradient(180deg, transparent, var(--accent-color), transparent);
+    background: linear-gradient(180deg, 
+        transparent 0%, 
+        var(--accent-color) 30%, 
+        var(--neon-cyan) 50%,
+        var(--accent-color) 70%,
+        transparent 100%);
     opacity: 0.5;
+    box-shadow: 0 0 15px var(--accent-color), 0 0 30px rgba(0, 255, 200, 0.3);
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 0.7; }
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(ellipse at top left, rgba(0, 255, 200, 0.04) 0%, transparent 40%),
+        radial-gradient(ellipse at bottom right, rgba(76, 201, 240, 0.03) 0%, transparent 40%);
+    pointer-events: none;
+    animation: sidebarAmbient 10s ease-in-out infinite;
+}
+
+@keyframes sidebarAmbient {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
 }
 
 /* 个人头像区域 */
@@ -162,49 +349,175 @@ body {
 
 .avatar-wrapper {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
     margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* 外层旋转光环 - 粗/亮 */
 .avatar-ring {
     position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid transparent;
+    border-top-color: var(--accent-color);
+    border-right-color: rgba(0, 255, 200, 0.6);
+    animation: spin 3s linear infinite, ringColorShift 6s ease-in-out infinite;
+    box-shadow: 
+        0 0 25px rgba(0, 255, 200, 0.4),
+        inset 0 0 15px rgba(0, 255, 200, 0.15);
+    filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+}
+
+@keyframes ringColorShift {
+    0%, 100% { 
+        border-top-color: var(--accent-color);
+        border-right-color: rgba(0, 255, 200, 0.6);
+        filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.5));
+    }
+    50% { 
+        border-top-color: var(--neon-cyan);
+        border-right-color: rgba(76, 201, 240, 0.6);
+        filter: drop-shadow(0 0 10px rgba(76, 201, 240, 0.5));
+    }
+}
+
+/* 第二层反向旋转光环 - 中等粗细/中等亮度 */
+.avatar-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
     border-radius: 50%;
     border: 2px solid transparent;
-    border-top-color: var(--accent-color);
-    border-right-color: var(--neon-purple);
-    animation: spin 3s linear infinite;
+    border-bottom-color: rgba(0, 255, 200, 0.45);
+    border-left-color: rgba(0, 245, 212, 0.3);
+    animation: spinReverse 5s linear infinite;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 200, 0.35));
+}
+
+/* 第三层脉冲光环 - 细/暗 */
+.avatar-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    animation: pulseRing 2.5s ease-in-out infinite, spinSlow 8s linear infinite;
 }
 
 @keyframes spin {
+    0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
 
+@keyframes spinReverse {
+    0% { transform: rotate(360deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes spinSlow {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes pulseRing {
+    0%, 100% { 
+        opacity: 0.35;
+        box-shadow: 0 0 0 0 rgba(0, 255, 200, 0.25);
+    }
+    50% { 
+        opacity: 0.7;
+        box-shadow: 0 0 15px 3px rgba(0, 245, 212, 0.2);
+    }
+}
+
 .avatar {
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
-    margin: 5px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.9) 0%, 
+        rgba(22, 33, 62, 0.95) 50%,
+        rgba(15, 15, 26, 0.98) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 
-        0 0 30px rgba(100, 255, 218, 0.2),
-        inset 0 0 20px rgba(100, 255, 218, 0.1);
+        0 0 50px rgba(0, 255, 200, 0.3),
+        0 0 100px rgba(0, 255, 200, 0.1),
+        inset 0 0 40px rgba(0, 255, 200, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1),
+        0 10px 40px rgba(0, 0, 0, 0.4);
     border: 2px solid var(--accent-color);
+    position: relative;
+    z-index: 1;
+    animation: avatarFloat 4s ease-in-out infinite, avatarGlow 5s ease-in-out infinite;
+}
+
+@keyframes avatarFloat {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes avatarGlow {
+    0%, 100% { 
+        box-shadow: 
+            0 0 50px rgba(0, 255, 200, 0.3),
+            0 0 100px rgba(0, 255, 200, 0.1),
+            inset 0 0 40px rgba(0, 255, 200, 0.08),
+            0 10px 40px rgba(0, 0, 0, 0.4);
+        border-color: var(--accent-color);
+    }
+    50% { 
+        box-shadow: 
+            0 0 60px rgba(76, 201, 240, 0.35),
+            0 0 120px rgba(0, 245, 212, 0.15),
+            inset 0 0 50px rgba(76, 201, 240, 0.1),
+            0 10px 40px rgba(0, 0, 0, 0.4);
+        border-color: var(--neon-cyan);
+    }
 }
 
 .avatar-text {
     font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 700;
     color: var(--accent-color);
-    text-shadow: 0 0 20px var(--accent-color);
+    text-shadow: 
+        0 0 20px var(--accent-color),
+        0 0 40px rgba(0, 255, 200, 0.5),
+        0 0 60px rgba(0, 255, 200, 0.3);
+    animation: textGlow 3s ease-in-out infinite;
+}
+
+@keyframes textGlow {
+    0%, 100% { 
+        color: var(--accent-color);
+        text-shadow: 
+            0 0 20px var(--accent-color),
+            0 0 40px rgba(0, 255, 200, 0.5);
+    }
+    50% { 
+        color: var(--neon-cyan);
+        text-shadow: 
+            0 0 30px var(--neon-cyan),
+            0 0 60px rgba(76, 201, 240, 0.7),
+            0 0 80px rgba(0, 245, 212, 0.4);
+    }
 }
 
 .name {
@@ -214,6 +527,8 @@ body {
     margin-bottom: 8px;
     letter-spacing: 4px;
     color: var(--text-dark);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInUp 0.8s ease-out;
 }
 
 .title {
@@ -221,18 +536,49 @@ body {
     color: var(--text-medium);
     font-weight: 300;
     margin-bottom: 16px;
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .status-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: rgba(100, 255, 218, 0.1);
-    padding: 6px 16px;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.1) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    backdrop-filter: blur(15px) saturate(150%);
+    -webkit-backdrop-filter: blur(15px) saturate(150%);
+    padding: 8px 18px;
     border-radius: 20px;
     font-size: 12px;
     color: var(--accent-color);
-    border: 1px solid rgba(100, 255, 218, 0.3);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    box-shadow: 
+        0 4px 15px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    animation: badgeShimmer 4s ease-in-out infinite;
+}
+
+@keyframes badgeShimmer {
+    0%, 100% { 
+        background: linear-gradient(135deg, rgba(0, 255, 200, 0.1) 0%, rgba(76, 201, 240, 0.08) 100%);
+        border-color: rgba(0, 255, 200, 0.2);
+    }
+    50% { 
+        background: linear-gradient(135deg, rgba(76, 201, 240, 0.12) 0%, rgba(0, 245, 212, 0.1) 100%);
+        border-color: rgba(76, 201, 240, 0.25);
+    }
 }
 
 .pulse {
@@ -240,12 +586,17 @@ body {
     height: 8px;
     background: var(--accent-color);
     border-radius: 50%;
-    animation: pulse 2s infinite;
+    animation: pulse 2s infinite, pulseColor 4s ease-in-out infinite;
 }
 
 @keyframes pulse {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7); }
-    50% { box-shadow: 0 0 0 8px rgba(100, 255, 218, 0); }
+    0%, 100% { box-shadow: 0 0 0 0 rgba(0, 255, 200, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(0, 255, 200, 0); }
+}
+
+@keyframes pulseColor {
+    0%, 100% { background: var(--accent-color); }
+    50% { background: var(--neon-cyan); }
 }
 
 /* 侧边栏通用样式 */
@@ -259,15 +610,66 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    animation: sectionTitleGlow 3s ease-in-out infinite;
+}
+
+@keyframes sectionTitleGlow {
+    0%, 100% { 
+        text-shadow: 0 0 5px rgba(0, 255, 200, 0.3);
+        color: var(--accent-color);
+    }
+    50% { 
+        text-shadow: 0 0 15px rgba(0, 255, 200, 0.5), 0 0 25px rgba(76, 201, 240, 0.3);
+        color: var(--neon-cyan);
+    }
 }
 
 .section-title i {
     font-size: 14px;
+    animation: iconBounce 2s ease-in-out infinite;
 }
 
-/* 联系方式 */
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-2px); }
+}
+
+/* 联系方式 - iOS玻璃卡片 */
 .contact-section {
     margin-bottom: 30px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.5) 0%, 
+        rgba(22, 33, 62, 0.4) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.4s ease;
+    animation: cardFadeIn 0.6s ease-out;
+}
+
+.contact-section:hover {
+    border-color: rgba(0, 255, 200, 0.15);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(0, 255, 200, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+@keyframes cardFadeIn {
+    from { 
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact-list {
@@ -278,32 +680,83 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 10px 0;
+    padding: 12px 14px;
+    margin-bottom: 8px;
     font-size: 13px;
     color: var(--text-light);
-    border-bottom: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.4) 0%, 
+        rgba(22, 33, 62, 0.3) 100%);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .contact-list li:last-child {
-    border-bottom: none;
+    margin-bottom: 0;
 }
 
 .contact-list li:hover {
     color: var(--accent-color);
-    padding-left: 8px;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.08) 0%, 
+        rgba(76, 201, 240, 0.05) 100%);
+    border-color: rgba(0, 255, 200, 0.15);
+    transform: translateX(6px) scale(1.02);
+    box-shadow: 
+        0 4px 20px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .contact-list li i {
-    width: 20px;
-    text-align: center;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.12) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    border-radius: 10px;
     color: var(--accent-color);
     font-size: 14px;
+    border: 1px solid rgba(0, 255, 200, 0.1);
+    transition: all 0.3s ease;
 }
 
-/* 资质证书 */
+.contact-list li:hover i {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+/* 资质证书 - iOS玻璃卡片 */
 .certificates-section {
     margin-bottom: 30px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.5) 0%, 
+        rgba(22, 33, 62, 0.4) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.4s ease;
+    animation: cardFadeIn 0.6s ease-out 0.1s both;
+}
+
+.certificates-section:hover {
+    border-color: rgba(0, 255, 200, 0.15);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(0, 255, 200, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
 }
 
 .cert-list {
@@ -312,29 +765,101 @@ body {
 
 .cert-list li {
     display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    padding: 8px 0;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    margin-bottom: 6px;
     font-size: 12px;
     color: var(--text-light);
     line-height: 1.5;
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.35) 0%, 
+        rgba(22, 33, 62, 0.25) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cert-list li:last-child {
+    margin-bottom: 0;
 }
 
 .cert-list li:hover {
     color: var(--text-dark);
-    transform: translateX(4px);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.06) 0%, 
+        rgba(76, 201, 240, 0.04) 100%);
+    border-color: rgba(0, 255, 200, 0.12);
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(0, 255, 200, 0.08);
 }
 
 .cert-list li i {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.15) 0%, 
+        rgba(76, 201, 240, 0.1) 100%);
+    border-radius: 8px;
     color: var(--accent-color);
-    font-size: 12px;
-    margin-top: 2px;
+    font-size: 11px;
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 255, 200, 0.12);
+    transition: all 0.3s ease;
+    animation: certIconPulse 3s ease-in-out infinite;
+    animation-delay: calc(var(--i, 0) * 0.2s);
 }
 
-/* 技能进度条 */
+.cert-list li:nth-child(1) i { --i: 0; }
+.cert-list li:nth-child(2) i { --i: 1; }
+.cert-list li:nth-child(3) i { --i: 2; }
+.cert-list li:nth-child(4) i { --i: 3; }
+.cert-list li:nth-child(5) i { --i: 4; }
+
+@keyframes certIconPulse {
+    0%, 100% { 
+        box-shadow: 0 0 0 0 rgba(0, 255, 200, 0.2);
+    }
+    50% { 
+        box-shadow: 0 0 10px 2px rgba(0, 255, 200, 0.15);
+    }
+}
+
+.cert-list li:hover i {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
+}
+
+/* 技能进度条 - iOS玻璃卡片 */
 .skills-section {
     margin-bottom: 0;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.5) 0%, 
+        rgba(22, 33, 62, 0.4) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.4s ease;
+    animation: cardFadeIn 0.6s ease-out 0.2s both;
+}
+
+.skills-section:hover {
+    border-color: rgba(0, 255, 200, 0.15);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(0, 255, 200, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
 }
 
 .skill-bars {
@@ -345,6 +870,23 @@ body {
 
 .skill-item {
     width: 100%;
+    padding: 10px 12px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.35) 0%, 
+        rgba(22, 33, 62, 0.25) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.4s ease;
+}
+
+.skill-item:hover {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.05) 0%, 
+        rgba(76, 201, 240, 0.03) 100%);
+    border-color: rgba(0, 255, 200, 0.1);
+    transform: scale(1.02);
 }
 
 .skill-header {
@@ -352,26 +894,63 @@ body {
     justify-content: space-between;
     font-size: 11px;
     color: var(--text-light);
-    margin-bottom: 6px;
+    margin-bottom: 8px;
+}
+
+.skill-header .skill-name {
+    transition: color 0.3s ease;
+}
+
+.skill-item:hover .skill-header .skill-name {
+    color: var(--accent-color);
+}
+
+.skill-header .skill-percent {
+    color: var(--accent-color);
+    font-family: 'Orbitron', monospace;
+    font-weight: 600;
+    animation: percentGlow 2s ease-in-out infinite;
+}
+
+@keyframes percentGlow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 255, 200, 0.3); }
+    50% { text-shadow: 0 0 10px rgba(0, 255, 200, 0.6); }
 }
 
 .skill-bar {
-    height: 6px;
-    background: var(--border-color);
-    border-radius: 3px;
+    height: 10px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.6) 0%, 
+        rgba(22, 33, 62, 0.5) 100%);
+    border-radius: 6px;
     overflow: hidden;
+    box-shadow: 
+        inset 0 2px 4px rgba(0, 0, 0, 0.4),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.03);
 }
 
 .skill-progress {
     height: 100%;
-    background: linear-gradient(90deg, var(--accent-color), var(--neon-blue));
-    border-radius: 3px;
+    background: linear-gradient(90deg, var(--accent-color), var(--neon-cyan), var(--neon-blue), var(--accent-color));
+    background-size: 300% 100%;
+    border-radius: 6px;
     position: relative;
-    animation: skillLoad 1.5s ease-out;
+    animation: skillLoad 1.5s ease-out, gradientFlow 4s ease infinite;
+    box-shadow: 
+        0 0 12px rgba(0, 255, 200, 0.5),
+        0 0 25px rgba(0, 255, 200, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 @keyframes skillLoad {
     from { width: 0 !important; }
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .skill-progress::after {
@@ -381,7 +960,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
     animation: shimmer 2s infinite;
 }
 
@@ -391,12 +970,17 @@ body {
 }
 
 /* ========================================
-   主内容区域
+   主内容区域 - iOS 26风格
    ======================================== */
 .main-content {
     flex: 1;
     padding: 40px;
-    background: var(--bg-light);
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.4) 0%, 
+        rgba(22, 33, 62, 0.35) 50%,
+        rgba(26, 26, 46, 0.4) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
 }
 
 .section {
@@ -416,59 +1000,217 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
+    animation: titleSlideIn 0.6s ease-out;
+}
+
+@keyframes titleSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.main-section-title .title-text {
+    background: linear-gradient(90deg, var(--text-dark), var(--accent-color), var(--text-dark));
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: titleTextShimmer 5s ease-in-out infinite;
+}
+
+@keyframes titleTextShimmer {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
 }
 
 .title-icon {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--accent-color), var(--neon-blue));
-    border-radius: 8px;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, var(--accent-color), var(--neon-cyan), var(--neon-blue));
+    background-size: 200% 200%;
+    animation: iconGradient 4s ease infinite, iconFloat 3s ease-in-out infinite;
+    border-radius: 14px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--primary-dark);
-    font-size: 16px;
+    font-size: 17px;
+    box-shadow: 
+        0 4px 20px rgba(0, 255, 200, 0.35),
+        0 0 30px rgba(0, 255, 200, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.title-icon::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    animation: iconShine 3s ease-in-out infinite;
+}
+
+@keyframes iconShine {
+    0%, 100% { transform: translateX(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) rotate(45deg); }
+}
+
+@keyframes iconGradient {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes iconFloat {
+    0%, 100% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-3px) scale(1.02); }
 }
 
 .title-line {
     flex: 1;
-    height: 1px;
-    background: linear-gradient(90deg, var(--border-color), transparent);
+    height: 2px;
+    background: linear-gradient(90deg, 
+        var(--accent-color), 
+        var(--neon-cyan),
+        var(--border-color), 
+        transparent);
+    background-size: 200% 100%;
+    animation: lineShimmer 4s ease-in-out infinite;
+    border-radius: 1px;
+    box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
 }
 
-/* 求职意向 */
+@keyframes lineShimmer {
+    0%, 100% { background-position: 0% 50%; opacity: 0.8; }
+    50% { background-position: 100% 50%; opacity: 1; }
+}
+
+/* 求职意向 - iOS玻璃卡片 */
 .intention-card {
-    background: var(--bg-white);
-    border-radius: 12px;
-    padding: 24px;
-    border: 1px solid var(--border-color);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 32px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.6) 0%, 
+        rgba(22, 33, 62, 0.5) 100%);
+    backdrop-filter: blur(30px) saturate(180%);
+    -webkit-backdrop-filter: blur(30px) saturate(180%);
+    border-radius: 22px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.25),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    animation: cardAppear 0.6s ease-out;
+}
+
+.intention-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 255, 200, 0.03), 
+        transparent);
+    animation: cardShine 6s ease-in-out infinite;
+}
+
+@keyframes cardShine {
+    0%, 100% { left: -100%; }
+    50% { left: 100%; }
+}
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.intention-card:hover {
+    border-color: rgba(0, 255, 200, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 
+        0 16px 48px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 255, 200, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 .intention-item {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.4) 0%, 
+        rgba(22, 33, 62, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.intention-item:hover {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.06) 0%, 
+        rgba(76, 201, 240, 0.04) 100%);
+    border-color: rgba(0, 255, 200, 0.12);
+    transform: scale(1.02);
 }
 
 .intention-item .label {
-    font-size: 11px;
+    font-size: 10px;
     color: var(--text-medium);
     text-transform: uppercase;
     letter-spacing: 2px;
+    opacity: 0.8;
 }
 
 .intention-item .value {
     font-size: 14px;
     color: var(--text-dark);
     font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.intention-item:hover .value {
+    color: var(--accent-color);
 }
 
 .intention-item .value.highlight {
     color: var(--accent-color);
     font-weight: 600;
+    animation: highlightPulse 3s ease-in-out infinite;
+}
+
+@keyframes highlightPulse {
+    0%, 100% { 
+        text-shadow: 0 0 5px rgba(0, 255, 200, 0.3);
+    }
+    50% { 
+        text-shadow: 0 0 15px rgba(0, 255, 200, 0.5), 0 0 25px rgba(76, 201, 240, 0.3);
+    }
 }
 
 /* 教学优势 */
@@ -479,31 +1221,116 @@ body {
 }
 
 .advantage-card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 20px 16px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.55) 0%, 
+        rgba(22, 33, 62, 0.45) 100%);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 24px 18px;
     text-align: center;
-    transition: all 0.3s ease;
+    animation: cardStagger 0.6s ease-out both;
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-card:nth-child(1) { animation-delay: 0.1s; }
+.advantage-card:nth-child(2) { animation-delay: 0.2s; }
+.advantage-card:nth-child(3) { animation-delay: 0.3s; }
+.advantage-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes cardStagger {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.advantage-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 255, 200, 0.03) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.advantage-card:hover::before {
+    opacity: 1;
+    animation: cardGlowRotate 4s linear infinite;
+}
+
+@keyframes cardGlowRotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .advantage-card:hover {
-    border-color: var(--accent-color);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+    border-color: rgba(0, 255, 200, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.7) 0%, 
+        rgba(22, 33, 62, 0.6) 100%);
 }
 
 .adv-icon {
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(0, 212, 255, 0.1));
-    border-radius: 12px;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.15) 0%, 
+        rgba(76, 201, 240, 0.1) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 12px;
-    font-size: 20px;
+    margin: 0 auto 14px;
+    font-size: 22px;
     color: var(--accent-color);
+    border: 1px solid rgba(0, 255, 200, 0.12);
+    box-shadow: 
+        0 4px 20px rgba(0, 255, 200, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transition: all 0.4s ease;
+    animation: iconColorShift 5s ease-in-out infinite;
+}
+
+@keyframes iconColorShift {
+    0%, 100% { 
+        background: linear-gradient(135deg, rgba(0, 255, 200, 0.15) 0%, rgba(76, 201, 240, 0.1) 100%);
+        border-color: rgba(0, 255, 200, 0.12);
+    }
+    50% { 
+        background: linear-gradient(135deg, rgba(76, 201, 240, 0.15) 0%, rgba(0, 245, 212, 0.12) 100%);
+        border-color: rgba(76, 201, 240, 0.15);
+    }
+}
+
+.advantage-card:hover .adv-icon {
+    box-shadow: 
+        0 8px 30px rgba(0, 255, 200, 0.25),
+        0 0 25px rgba(0, 255, 200, 0.2);
+    transform: scale(1.1);
+    animation: none;
+    background: linear-gradient(135deg, rgba(0, 255, 200, 0.2) 0%, rgba(76, 201, 240, 0.15) 100%);
 }
 
 .advantage-card h3 {
@@ -527,17 +1354,27 @@ body {
 }
 
 .tutoring-card {
-    background: var(--bg-white);
-    border-radius: 12px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.55) 0%, 
+        rgba(22, 33, 62, 0.45) 100%);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border-radius: 22px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .tutoring-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-    border-color: var(--accent-color);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.35),
+        0 0 50px rgba(0, 255, 200, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    border-color: rgba(0, 255, 200, 0.2);
 }
 
 .card-header {
@@ -561,11 +1398,38 @@ body {
 }
 
 .card-header.education {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.85) 0%, 
+        rgba(0, 245, 212, 0.9) 25%,
+        rgba(76, 201, 240, 0.85) 50%,
+        rgba(0, 245, 212, 0.9) 75%,
+        rgba(0, 255, 200, 0.85) 100%);
+    background-size: 300% 300%;
+    animation: headerGradient 6s ease infinite;
 }
 
 .card-header.computer {
-    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+    background: linear-gradient(135deg, 
+        rgba(76, 201, 240, 0.9) 0%, 
+        rgba(0, 180, 216, 0.85) 25%,
+        rgba(0, 255, 200, 0.8) 50%,
+        rgba(0, 180, 216, 0.85) 75%,
+        rgba(76, 201, 240, 0.9) 100%);
+    background-size: 300% 300%;
+    animation: headerGradient 6s ease infinite;
+}
+
+@keyframes headerGradient {
+    0%, 100% { background-position: 0% 50%; }
+    25% { background-position: 50% 0%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 100%; }
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .card-header i {
@@ -583,35 +1447,88 @@ body {
 
 .card-body {
     padding: 20px;
+    background: linear-gradient(180deg, 
+        rgba(26, 26, 46, 0.3) 0%, 
+        rgba(22, 33, 62, 0.2) 100%);
 }
 
 .subject-item {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 8px 0;
+    gap: 12px;
+    padding: 10px 14px;
+    margin-bottom: 8px;
     font-size: 13px;
     color: var(--text-light);
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.4) 0%, 
+        rgba(22, 33, 62, 0.3) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s ease;
+}
+
+.subject-item:last-of-type {
+    margin-bottom: 0;
+}
+
+.subject-item:hover {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.06) 0%, 
+        rgba(76, 201, 240, 0.04) 100%);
+    border-color: rgba(0, 255, 200, 0.1);
+    transform: translateX(6px);
+    color: var(--text-dark);
 }
 
 .subject-item i {
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.12) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    border-radius: 8px;
     color: var(--accent-color);
-    font-size: 12px;
+    font-size: 11px;
+    border: 1px solid rgba(0, 255, 200, 0.1);
+    transition: all 0.3s ease;
+}
+
+.subject-item:hover i {
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(0, 255, 200, 0.3);
 }
 
 .card-note {
-    margin-top: 12px;
-    padding-top: 12px;
-    border-top: 1px dashed var(--border-color);
+    margin-top: 14px;
+    padding: 12px;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.04) 0%, 
+        rgba(76, 201, 240, 0.02) 100%);
+    border-radius: 10px;
+    border: 1px dashed rgba(0, 255, 200, 0.15);
     font-size: 11px;
     color: var(--text-medium);
     font-style: italic;
+    transition: all 0.3s ease;
+}
+
+.card-note:hover {
+    border-color: rgba(0, 255, 200, 0.25);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.06) 0%, 
+        rgba(76, 201, 240, 0.04) 100%);
 }
 
 /* 教育背景时间线 */
 .timeline {
     position: relative;
-    padding-left: 30px;
+    padding-left: 35px;
 }
 
 .timeline::before {
@@ -620,13 +1537,46 @@ body {
     left: 12px;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, var(--accent-color), var(--border-color));
+    width: 3px;
+    background: linear-gradient(180deg, 
+        var(--accent-color), 
+        var(--neon-cyan),
+        var(--border-color));
+    border-radius: 2px;
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.2);
+    animation: timelineGlow 3s ease-in-out infinite;
+}
+
+@keyframes timelineGlow {
+    0%, 100% { 
+        box-shadow: 0 0 10px rgba(0, 255, 200, 0.2);
+        opacity: 0.8;
+    }
+    50% { 
+        box-shadow: 0 0 20px rgba(0, 255, 200, 0.4);
+        opacity: 1;
+    }
 }
 
 .timeline-item {
     position: relative;
     padding-bottom: 24px;
+    animation: timelineItemAppear 0.6s ease-out both;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.1s; }
+.timeline-item:nth-child(2) { animation-delay: 0.2s; }
+.timeline-item:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes timelineItemAppear {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .timeline-item:last-child {
@@ -637,29 +1587,63 @@ body {
     position: absolute;
     left: -30px;
     top: 0;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: var(--bg-light);
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9), rgba(22, 33, 62, 0.95));
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
     border: 2px solid var(--accent-color);
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--accent-color);
-    font-size: 10px;
-    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+    font-size: 11px;
+    box-shadow: 
+        0 0 20px rgba(0, 255, 200, 0.35),
+        0 0 40px rgba(0, 255, 200, 0.15),
+        inset 0 0 10px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    animation: markerPulse 3s ease-in-out infinite;
+}
+
+@keyframes markerPulse {
+    0%, 100% { 
+        box-shadow: 
+            0 0 20px rgba(0, 255, 200, 0.35),
+            0 0 40px rgba(0, 255, 200, 0.15);
+        border-color: var(--accent-color);
+    }
+    50% { 
+        box-shadow: 
+            0 0 25px rgba(76, 201, 240, 0.4),
+            0 0 50px rgba(76, 201, 240, 0.2);
+        border-color: var(--neon-cyan);
+    }
 }
 
 .timeline-content {
-    background: var(--bg-white);
-    padding: 20px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.55) 0%, 
+        rgba(22, 33, 62, 0.45) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    padding: 22px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 20px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .timeline-content:hover {
-    border-color: var(--accent-color);
+    border-color: rgba(0, 255, 200, 0.2);
+    box-shadow: 
+        0 12px 35px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(0, 255, 200, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateX(8px);
 }
 
 .time-range {
@@ -696,37 +1680,76 @@ body {
 }
 
 .work-item {
-    background: var(--bg-white);
-    padding: 24px;
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-    border-left: 3px solid var(--accent-color);
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.55) 0%, 
+        rgba(22, 33, 62, 0.45) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    padding: 26px;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-left: 4px solid var(--accent-color);
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 6px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .work-item:hover {
-    border-color: var(--accent-color);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: rgba(0, 255, 200, 0.15);
+    border-left-color: var(--neon-cyan);
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.3),
+        0 0 35px rgba(0, 255, 200, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateX(6px);
 }
 
 .work-item.current {
-    border-left-color: var(--neon-purple);
-    background: linear-gradient(135deg, var(--bg-white), rgba(123, 104, 238, 0.05));
+    border-left-color: var(--neon-cyan);
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.6) 0%, 
+        rgba(0, 255, 200, 0.05) 100%);
+    box-shadow: 
+        0 8px 30px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(0, 255, 200, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .work-badge {
     position: absolute;
     top: 16px;
     right: 16px;
-    background: linear-gradient(135deg, var(--neon-purple), #9d4edd);
-    color: #fff;
+    background: linear-gradient(135deg, 
+        var(--accent-color) 0%, 
+        var(--neon-cyan) 50%, 
+        var(--accent-color) 100%);
+    background-size: 200% 200%;
+    color: var(--primary-dark);
     font-size: 10px;
-    padding: 4px 12px;
+    padding: 6px 14px;
     border-radius: 12px;
-    font-weight: 600;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
+    animation: workBadgeGlow 2s ease infinite, gradientShift 3s ease infinite;
+    box-shadow: 
+        0 4px 15px rgba(0, 255, 200, 0.4),
+        0 0 20px rgba(0, 255, 200, 0.2);
+}
+
+@keyframes workBadgeGlow {
+    0%, 100% {
+        box-shadow: 
+            0 4px 15px rgba(0, 255, 200, 0.4),
+            0 0 20px rgba(0, 255, 200, 0.2);
+    }
+    50% {
+        box-shadow: 
+            0 4px 20px rgba(76, 201, 240, 0.5),
+            0 0 30px rgba(76, 201, 240, 0.3);
+    }
 }
 
 .work-header {
@@ -791,26 +1814,86 @@ body {
 }
 
 .stat-card {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 24px 16px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.55) 0%, 
+        rgba(22, 33, 62, 0.45) 100%);
+    backdrop-filter: blur(25px) saturate(180%);
+    -webkit-backdrop-filter: blur(25px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 18px;
+    padding: 28px 18px;
     text-align: center;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 6px 25px rgba(0, 0, 0, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--accent-color), 
+        var(--neon-cyan), 
+        var(--accent-color), 
+        transparent);
+    background-size: 200% 100%;
+    animation: shimmerLine 3s ease infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes shimmerLine {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+}
+
+.stat-card:hover::before {
+    opacity: 1;
 }
 
 .stat-card:hover {
-    border-color: var(--accent-color);
-    transform: scale(1.05);
+    border-color: rgba(0, 255, 200, 0.2);
+    transform: scale(1.08) translateY(-4px);
+    box-shadow: 
+        0 20px 45px rgba(0, 0, 0, 0.3),
+        0 0 40px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .stat-number {
     font-family: 'Orbitron', monospace;
-    font-size: 32px;
+    font-size: 36px;
     font-weight: 700;
     color: var(--accent-color);
-    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    text-shadow: 
+        0 0 20px rgba(0, 255, 200, 0.4),
+        0 0 40px rgba(0, 255, 200, 0.2);
     margin-bottom: 8px;
+    animation: numberPulse 4s ease-in-out infinite;
+}
+
+@keyframes numberPulse {
+    0%, 100% {
+        color: var(--accent-color);
+        text-shadow: 
+            0 0 20px rgba(0, 255, 200, 0.4),
+            0 0 40px rgba(0, 255, 200, 0.2);
+    }
+    50% {
+        color: var(--neon-cyan);
+        text-shadow: 
+            0 0 30px rgba(76, 201, 240, 0.6),
+            0 0 60px rgba(76, 201, 240, 0.4),
+            0 0 80px rgba(0, 245, 212, 0.2);
+    }
 }
 
 .stat-label {
@@ -826,30 +1909,62 @@ body {
 }
 
 .pub-item {
-    background: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: 10px;
-    padding: 16px 20px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.5) 0%, 
+        rgba(22, 33, 62, 0.4) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 14px;
+    padding: 18px 22px;
     display: flex;
     align-items: flex-start;
     gap: 16px;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .pub-item:hover {
-    border-color: var(--accent-color);
-    transform: translateX(8px);
+    border-color: rgba(0, 255, 200, 0.15);
+    transform: translateX(12px);
+    box-shadow: 
+        0 10px 30px rgba(0, 0, 0, 0.25),
+        0 0 25px rgba(0, 255, 200, 0.06),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    background: rgba(17, 34, 64, 0.6);
 }
 
 .pub-year {
     font-family: 'Orbitron', monospace;
     font-size: 12px;
     color: var(--accent-color);
-    background: rgba(100, 255, 218, 0.1);
-    padding: 4px 10px;
-    border-radius: 6px;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.12) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 6px 12px;
+    border-radius: 10px;
     font-weight: 600;
     white-space: nowrap;
+    border: 1px solid rgba(0, 255, 200, 0.15);
+    box-shadow: 
+        0 0 10px rgba(0, 255, 200, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.pub-item:hover .pub-year {
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.2) 0%, 
+        rgba(76, 201, 240, 0.15) 100%);
+    box-shadow: 
+        0 0 20px rgba(0, 255, 200, 0.25),
+        0 0 30px rgba(76, 201, 240, 0.15);
+    transform: scale(1.05);
+    border-color: rgba(0, 255, 200, 0.25);
 }
 
 .pub-content {
@@ -900,6 +2015,10 @@ body {
 
     .main-content {
         padding: 30px 20px;
+    }
+
+    .intention-card {
+        grid-template-columns: 1fr;
     }
 
     .tutoring-grid {
@@ -977,6 +2096,36 @@ body {
     </style>
 </head>
 <body>
+    <!-- SVG图标定义 -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-satellite" viewBox="0 0 512 512"><path d="M502.3 41.4c12.5 12.5 12.5 32.8 0 45.3l-48 48c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3l48-48c12.5-12.5 32.8-12.5 45.3 0zm-128 128c12.5 12.5 12.5 32.8 0 45.3L143.6 445.4c-12.5 12.5-32.8 12.5-45.3 0L9.7 356.7c-12.5-12.5-12.5-32.8 0-45.3L240.4 80.7c12.5-12.5 32.8-12.5 45.3 0l88.6 88.7zM64 400l48-48 48 48-48 48-48-48z"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 512 512"><path d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z"/></symbol>
+        <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></symbol>
+        <symbol id="icon-marker" viewBox="0 0 384 512"><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></symbol>
+        <symbol id="icon-shield" viewBox="0 0 512 512"><path d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.7 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0z"/></symbol>
+        <symbol id="icon-check" viewBox="0 0 512 512"><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></symbol>
+        <symbol id="icon-brain" viewBox="0 0 512 512"><path d="M184 0c30.9 0 56 25.1 56 56V456c0 30.9-25.1 56-56 56c-28.9 0-52.7-21.9-55.7-50.1c-5.2 1.4-10.7 2.1-16.3 2.1c-35.3 0-64-28.7-64-64c0-7.4 1.3-14.6 3.6-21.2C21.4 365.9 0 338.6 0 304c0-31.9 18.7-59.5 45.8-72.3C37.1 220.8 32 207 32 192c0-30.7 21.6-56.3 50.4-62.6C80.8 123.9 80 118 80 112c0-29.9 20.6-55.1 48.3-62.1C131.3 21.9 155.1 0 184 0zM328 0c28.9 0 52.6 21.9 55.7 49.9c27.8 7 48.3 32.1 48.3 62.1c0 6-.8 11.9-2.4 17.4c28.8 6.2 50.4 31.9 50.4 62.6c0 15-5.1 28.8-13.8 39.7C493.3 244.5 512 272.1 512 304c0 34.6-21.4 61.9-51.6 74.8c2.3 6.6 3.6 13.8 3.6 21.2c0 35.3-28.7 64-64 64c-5.6 0-11.1-.7-16.3-2.1c-3 28.2-26.8 50.1-55.7 50.1c-30.9 0-56-25.1-56-56V56c0-30.9 25.1-56 56-56z"/></symbol>
+        <symbol id="icon-cart" viewBox="0 0 576 512"><path d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></symbol>
+        <symbol id="icon-language" viewBox="0 0 640 512"><path d="M0 128C0 92.7 28.7 64 64 64H256h48 16H576c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H320 304 256 64c-35.3 0-64-28.7-64-64V128zm320 0V384H576V128H320zM178.3 175.9c-3.2-7.2-10.4-11.9-18.3-11.9s-15.1 4.7-18.3 11.9l-64 144c-4.5 10.1 .1 21.9 10.2 26.4s21.9-.1 26.4-10.2l8.9-20.1h73.6l8.9 20.1c4.5 10.1 16.3 14.6 26.4 10.2s14.6-16.3 10.2-26.4l-64-144zM160 233.2L179 276H141l19-42.8zM448 164c11 0 20 9 20 20v4h44c11 0 20 9 20 20s-9 20-20 20h-2l-1.6 4.5c-8.9 24.4-22.4 46.6-39.6 65.4c.9 .6 1.8 1.1 2.7 1.6l18.9 11.3c9.5 5.7 12.5 18 6.9 27.4s-18 12.5-27.4 6.9l-18.9-11.3c-4.5-2.7-8.8-5.5-13.1-8.5c-10.6 7.5-21.9 14-34 19.4l-3.6 1.6c-10.1 4.5-21.9-.1-26.4-10.2s.1-21.9 10.2-26.4l3.6-1.6c6.4-2.9 12.6-6.1 18.5-9.8l-12.2-12.2c-7.8-7.8-7.8-20.5 0-28.3s20.5-7.8 28.3 0l14.6 14.6 .5 .5c12.4-13.1 22.5-28.3 29.8-45H448 376c-11 0-20-9-20-20s9-20 20-20h52v-4c0-11 9-20 20-20z"/></symbol>
+        <symbol id="icon-chip" viewBox="0 0 512 512"><path d="M176 24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64c-35.3 0-64 28.7-64 64H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64v56H24c-13.3 0-24 10.7-24 24s10.7 24 24 24H64c0 35.3 28.7 64 64 64v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448h56v40c0 13.3 10.7 24 24 24s24-10.7 24-24V448c35.3 0 64-28.7 64-64h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V280h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448V176h40c13.3 0 24-10.7 24-24s-10.7-24-24-24H448c0-35.3-28.7-64-64-64V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H280V24c0-13.3-10.7-24-24-24s-24 10.7-24 24V64H176V24zM160 128H352c17.7 0 32 14.3 32 32V352c0 17.7-14.3 32-32 32H160c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32zm32 64v128H320V192H192z"/></symbol>
+        <symbol id="icon-crosshairs" viewBox="0 0 512 512"><path d="M256 0c17.7 0 32 14.3 32 32V42.4c93.7 13.9 167.7 88 181.6 181.6H480c17.7 0 32 14.3 32 32s-14.3 32-32 32H469.6c-13.9 93.7-88 167.7-181.6 181.6V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V469.6C130.3 455.7 56.3 381.7 42.4 288H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H42.4C56.3 130.3 130.3 56.3 224 42.4V32c0-17.7 14.3-32 32-32zM107.4 288c12.5 58.3 58.4 104.1 116.6 116.6V384c0-17.7 14.3-32 32-32s32 14.3 32 32v20.6c58.3-12.5 104.1-58.4 116.6-116.6H384c-17.7 0-32-14.3-32-32s14.3-32 32-32h20.6C392.1 165.7 346.3 119.9 288 107.4V128c0 17.7-14.3 32-32 32s-32-14.3-32-32V107.4C165.7 119.9 119.9 165.7 107.4 224H128c17.7 0 32 14.3 32 32s-14.3 32-32 32H107.4zM256 224a32 32 0 1 1 0 64 32 32 0 1 1 0-64z"/></symbol>
+        <symbol id="icon-star" viewBox="0 0 576 512"><path d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3Lために
+
+438.5 329l104.2-103.1c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"/></symbol>
+        <symbol id="icon-graduate" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
+        <symbol id="icon-book-reader" viewBox="0 0 512 512"><path d="M160 96a96 96 0 1 1 192 0A96 96 0 1 1 160 96zm80 152V512l-48.4-24.2c-20.9-10.4-43.5-17-66.8-19.3l-96-9.6C12.5 457.2 0 443.5 0 427V224c0-17.7 14.3-32 32-32H62.3c63.6 0 125.6 19.6 177.7 56zm32 264V248c52.1-36.4 114.1-56 177.7-56H480c17.7 0 32 14.3 32 32V427c0 16.4-12.5 30.2-28.8 31.8l-96 9.6c-23.2 2.3-45.9 8.9-66.8 19.3L272 512z"/></symbol>
+        <symbol id="icon-heart" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></symbol>
+        <symbol id="icon-flask" viewBox="0 0 448 512"><path d="M288 0H160 128C110.3 0 96 14.3 96 32s14.3 32 32 32V196.8c0 11.8-3.3 23.5-9.5 33.5L10.3 406.2C3.6 417.2 0 429.7 0 442.6C0 480.9 31.1 512 69.4 512H378.6c38.3 0 69.4-31.1 69.4-69.4c0-12.8-3.6-25.4-10.3-36.4L329.5 230.4c-6.2-10.1-9.5-21.7-9.5-33.5V64c17.7 0 32-14.3 32-32s-14.3-32-32-32H288zM192 196.8V64h64V196.8c0 23.7 6.6 46.9 19 67.1L309.5 320h-171L173 263.9c12.4-20.2 19-43.4 19-67.1z"/></symbol>
+        <symbol id="icon-teacher" viewBox="0 0 640 512"><path d="M160 64c0-35.3 28.7-64 64-64H576c35.3 0 64 28.7 64 64V352c0 35.3-28.7 64-64 64H336.8c-11.8-25.5-29.9-47.5-52.4-64H384V320c0-17.7 14.3-32 32-32h64c17.7 0 32 14.3 32 32v32h64V64L224 64v49.1C205.2 102.2 183.3 96 160 96V64zm0 64a96 96 0 1 1 0 192 96 96 0 1 1 0-192zM133.3 352h53.3C260.3 352 320 411.7 320 485.3c0 14.7-11.9 26.7-26.7 26.7H26.7C11.9 512 0 500.1 0 485.3C0 411.7 59.7 352 133.3 352z"/></symbol>
+        <symbol id="icon-book-open" viewBox="0 0 576 512"><path d="M249.6 471.5c10.8 3.8 22.4-4.1 22.4-15.5V78.6c0-4.2-1.6-8.4-5-11C247.4 52 202.4 32 144 32C93.5 32 46.3 45.3 18.1 56.1C6.8 60.5 0 71.7 0 83.8V454.1c0 11.9 12.8 20.2 24.1 16.5C55.6 460.1 105.5 448 144 448c33.9 0 79 14 105.6 23.5zm76.8 0C353 462 398.1 448 432 448c38.5 0 88.4 12.1 119.9 22.6c11.3 3.8 24.1-4.6 24.1-16.5V83.8c0-12.1-6.8-23.3-18.1-27.6C525.7 45.3 478.5 32 432 32c-58.4 0-103.4 20-123 35.6c-3.3 2.6-5 6.8-5 11V456c0 11.4 11.7 19.3 22.4 15.5z"/></symbol>
+        <symbol id="icon-laptop" viewBox="0 0 640 512"><path d="M64 96c0-35.3 28.7-64 64-64H512c35.3 0 64 28.7 64 64V352H512V96H128V352H64V96zM0 403.2C0 392.6 8.6 384 19.2 384H620.8c10.6 0 19.2 8.6 19.2 19.2c0 42.4-34.4 76.8-76.8 76.8H76.8C34.4 480 0 445.6 0 403.2zM281 209l-31 31 31 31c9.4 9.4 9.4 24.6 0 33.9s-24.6 9.4-33.9 0l-48-48c-9.4-9.4-9.4-24.6 0-33.9l48-48c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9zM393 175l48 48c9.4 9.4 9.4 24.6 0 33.9l-48 48c-9.4 9.4-24.6 9.4-33.9 0s-9.4-24.6 0-33.9l31-31-31-31c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0z"/></symbol>
+        <symbol id="icon-cap" viewBox="0 0 640 512"><path d="M320 32c-8.1 0-16.1 1.4-23.7 4.1L15.8 137.4C6.3 140.9 0 149.9 0 160s6.3 19.1 15.8 22.6l57.9 20.9C57.3 229.3 48 259.8 48 291.9v28.1c0 28.4-10.8 57.7-22.3 80.8c-6.5 13-13.9 25.8-22.5 37.6C0 442.7-.9 448.3 .9 453.4s6 8.9 11.2 10.2l64 16c4.2 1.1 8.7 .3 12.4-2s6.3-6.1 7.1-10.4c8.6-42.8 4.3-81.2-2.1-108.7C90.3 344.3 86 329.8 80 316.5V291.9c0-30.2 10.2-58.7 27.9-81.5c12.9-15.5 29.6-28 49.2-35.7l157-61.7c8.2-3.2 17.5 .8 20.7 9s-.8 17.5-9 20.7l-157 61.7c-12.4 4.9-23.3 12.4-32.2 21.6l159.6 57.6c7.6 2.7 15.6 4.1 23.7 4.1s16.1-1.4 23.7-4.1L624.2 182.6c9.5-3.4 15.8-12.5 15.8-22.6s-6.3-19.1-15.8-22.6L343.7 36.1C336.1 33.4 328.1 32 320 32zM128 408c0 35.3 86 72 192 72s192-36.7 192-72L496.7 262.6 354.5 314c-11.1 4-22.8 6-34.5 6s-23.5-2-34.5-6L143.3 262.6 128 408z"/></symbol>
+        <symbol id="icon-award" viewBox="0 0 384 512"><path d="M173.8 5.5c11-7.3 25.4-7.3 36.4 0L228 17.2c6 3.9 13 5.8 20.1 5.4l21.3-1.3c13.2-.8 25.6 6.4 31.5 18.2l9.6 19.1c3.2 6.4 8.4 11.5 14.7 14.7L344.5 83c11.8 5.9 19 18.3 18.2 31.5l-1.3 21.3c-.4 7.1 1.5 14.2 5.4 20.1l11.8 17.8c7.3 11 7.3 25.4 0 36.4L366.8 228c-3.9 6-5.8 13-5.4 20.1l1.3 21.3c.8 13.2-6.4 25.6-18.2 31.5l-19.1 9.6c-6.4 3.2-11.5 8.4-14.7 14.7L300.9 344.5c-5.9 11.8-18.3 19-31.5 18.2l-21.3-1.3c-7.1-.4-14.2 1.5-20.1 5.4l-17.8 11.8c-11 7.3-25.4 7.3-36.4 0L156 366.8c-6-3.9-13-5.8-20.1-5.4l-21.3 1.3c-13.2 .8-25.6-6.4-31.5-18.2l-9.6-19.1c-3.2-6.4-8.4-11.5-14.7-14.7L39.5 300.9c-11.8-5.9-19-18.3-18.2-31.5l1.3-21.3c.4-7.1-1.5-14.2-5.4-20.1L5.5 210.2c-7.3-11-7.3-25.4 0-36.4L17.2 156c3.9-6 5.8-13 5.4-20.1l-1.3-21.3c-.8-13.2 6.4-25.6 18.2-31.5l19.1-9.6C65 70.2 70.2 65 73.4 58.6L83 39.5c5.9-11.8 18.3-19 31.5-18.2l21.3 1.3c7.1 .4 14.2-1.5 20.1-5.4L173.8 5.5zM272 192a80 80 0 1 0 -160 0 80 80 0 1 0 160 0zM1.3 441.8L44.4 339.3c.2 .1 .3 .2 .4 .4l9.6 19.1c11.7 23.2 36.4 37.3 62.8 35.8l21.3-1.3c1.3-.1 2.7 .3 3.8 1l17.8 11.8c20.2 13.5 46.7 13.5 66.9 0l17.8-11.8c1.1-.7 2.4-1.1 3.8-1l21.3 1.3c26.2 1.6 51-12.6 62.8-35.8l9.6-19.1c.1-.2 .2-.3 .4-.4l43.2 102.5c5.3 12.5-.4 26.9-12.8 32.3c-4.9 2.1-10.4 2.6-15.6 1.4l-31.8-7.2c-24.6-5.6-50.2 3.4-66.5 23.2l-20 24.4c-8.1 9.8-22.2 11.7-32.3 4.4c-4.4-3.2-7.5-7.8-8.9-13l-11.7-42.1c-7.5-27.2-32.7-46-60.8-46H66.4c-13.1 0-23.7-10.6-23.7-23.7c0-6.4 2.6-12.5 7.2-17l14-13.7c22.1-21.7 29-53.7 17.9-81.7l-7.7-19.4c-.2-.4-.3-.8-.5-1.2L1.3 441.8z"/></symbol>
+        <symbol id="icon-briefcase" viewBox="0 0 512 512"><path d="M184 48H328c4.4 0 8 3.6 8 8V96H176V56c0-4.4 3.6-8 8-8zm-56 8V96H64C28.7 96 0 124.7 0 160v96H192 320 512V160c0-35.3-28.7-64-64-64H384V56c0-30.9-25.1-56-56-56H184c-30.9 0-56 25.1-56 56zM512 288H320v32c0 17.7-14.3 32-32 32H224c-17.7 0-32-14.3-32-32V288H0V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V288z"/></symbol>
+        <symbol id="icon-trophy" viewBox="0 0 576 512"><path d="M400 0H176c-26.5 0-48.1 21.8-47.1 48.2c.2 5.3 .4 10.6 .7 15.8H24C10.7 64 0 74.7 0 88c0 92.6 33.5 157 78.5 200.7c44.3 43.1 98.5 64.8 138.1 75.8c23.4 6.5 39.4 26 39.4 45.6c0 20.9-17 37.9-37.9 37.9H192c-17.7 0-32 14.3-32 32s14.3 32 32 32H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H357.9C337 448 320 431 320 410.1c0-19.6 15.9-39.2 39.4-45.6c39.6-11 93.9-32.7 138.1-75.8C542.5 245 576 180.6 576 88c0-13.3-10.7-24-24-24H446.4c.3-5.2 .5-10.4 .7-15.8C448.1 21.8 426.5 0 400 0zM48.9 112h84.4c9.1 90.1 29.2 150.3 51.9 190.6c-24.9-11-50.8-26.5-73.2-48.3c-32-31.1-58-76-63-142.3zM464.1 254.3c-22.4 21.8-48.3 37.3-73.2 48.3c22.7-40.3 42.8-100.5 51.9-190.6h84.4c-5.1 66.3-31.1 111.2-63 142.3z"/></symbol>
+        <symbol id="icon-file" viewBox="0 0 384 512"><path d="M64 0C28.7 0 0 28.7 0 64V448c0 35.3 28.7 64 64 64H320c35.3 0 64-28.7 64-64V160H256c-17.7 0-32-14.3-32-32V0H64zM256 0V128H384L256 0zM112 256H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H272c8.8 0 16 7.2 16 16s-7.2 16-16 16H112c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></symbol>
+    </svg>
+
     <!-- 科技感背景粒子 -->
     <div class="tech-bg">
         <div class="grid-lines"></div>
@@ -1005,27 +2154,27 @@ body {
             </div>
 
             <div class="contact-section">
-                <h2 class="section-title"><i class="fas fa-satellite-dish"></i> 联系方式</h2>
+                <h2 class="section-title"><span class="icon"><svg><use href="#icon-satellite"/></svg></span> 联系方式</h2>
                 <ul class="contact-list">
-                    <li><i class="fas fa-phone"></i> <span>159-4406-3637</span></li>
-                    <li><i class="fas fa-envelope"></i> <span>375479842@qq.com</span></li>
-                    <li><i class="fas fa-map-marker-alt"></i> <span>吉林省</span></li>
+                    <li><span class="icon"><svg><use href="#icon-phone"/></svg></span> <span>159-4406-3637</span></li>
+                    <li><span class="icon"><svg><use href="#icon-envelope"/></svg></span> <span>375479842@qq.com</span></li>
+                    <li><span class="icon"><svg><use href="#icon-marker"/></svg></span> <span>吉林省</span></li>
                 </ul>
             </div>
 
             <div class="certificates-section">
-                <h2 class="section-title"><i class="fas fa-shield-alt"></i> 资质认证</h2>
+                <h2 class="section-title"><span class="icon"><svg><use href="#icon-shield"/></svg></span> 资质认证</h2>
                 <ul class="cert-list">
-                    <li><i class="fas fa-check-circle"></i> 高中教师资格证</li>
-                    <li><i class="fas fa-check-circle"></i> 大学教师资格证</li>
-                    <li><i class="fas fa-brain"></i> 中科院心理咨询师证</li>
-                    <li><i class="fas fa-shopping-cart"></i> 电子商务师（中级）</li>
-                    <li><i class="fas fa-language"></i> CET-4</li>
+                    <li><span class="icon"><svg><use href="#icon-check"/></svg></span> 高中教师资格证</li>
+                    <li><span class="icon"><svg><use href="#icon-check"/></svg></span> 大学教师资格证</li>
+                    <li><span class="icon"><svg><use href="#icon-brain"/></svg></span> 中科院心理咨询师证</li>
+                    <li><span class="icon"><svg><use href="#icon-cart"/></svg></span> 电子商务师（中级）</li>
+                    <li><span class="icon"><svg><use href="#icon-language"/></svg></span> CET-4</li>
                 </ul>
             </div>
 
             <div class="skills-section">
-                <h2 class="section-title"><i class="fas fa-microchip"></i> 核心技能</h2>
+                <h2 class="section-title"><span class="icon"><svg><use href="#icon-chip"/></svg></span> 核心技能</h2>
                 <div class="skill-bars">
                     <div class="skill-item">
                         <div class="skill-header">
@@ -1064,14 +2213,14 @@ body {
             <!-- 求职意向 -->
             <section class="section intention">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-crosshairs"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-crosshairs"/></svg></span></span>
                     <span>求职意向</span>
                     <span class="title-line"></span>
                 </h2>
                 <div class="intention-card">
                     <div class="intention-item">
                         <span class="label">目标职位</span>
-                        <span class="value highlight">兼职教师（专升本/考研辅导）</span>
+                        <span class="value highlight">兼职教师</span>
                     </div>
                     <div class="intention-item">
                         <span class="label">工作方式</span>
@@ -1087,28 +2236,28 @@ body {
             <!-- 教学优势 -->
             <section class="section advantages">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-star"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-star"/></svg></span></span>
                     <span>教学优势</span>
                     <span class="title-line"></span>
                 </h2>
                 <div class="advantage-grid">
                     <div class="advantage-card">
-                        <div class="adv-icon"><i class="fas fa-user-graduate"></i></div>
+                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-graduate"/></svg></span></div>
                         <h3>11年教学经验</h3>
                         <p>从小学到高职院校，完整覆盖各学段教学</p>
                     </div>
                     <div class="advantage-card">
-                        <div class="adv-icon"><i class="fas fa-book-reader"></i></div>
+                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-book-reader"/></svg></span></div>
                         <h3>双学科背景</h3>
                         <p>计算机本科+教育学硕士，跨学科辅导能力强</p>
                     </div>
                     <div class="advantage-card">
-                        <div class="adv-icon"><i class="fas fa-heart"></i></div>
+                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-heart"/></svg></span></div>
                         <h3>心理咨询资质</h3>
                         <p>关注学生心理状态，提供学业规划与激励</p>
                     </div>
                     <div class="advantage-card">
-                        <div class="adv-icon"><i class="fas fa-flask"></i></div>
+                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-flask"/></svg></span></div>
                         <h3>教研能力突出</h3>
                         <p>发表6篇学术论文，持续优化教学方法</p>
                     </div>
@@ -1118,7 +2267,7 @@ body {
             <!-- 辅导方向 -->
             <section class="section tutoring">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-teacher"/></svg></span></span>
                     <span>辅导方向</span>
                     <span class="title-line"></span>
                 </h2>
@@ -1126,16 +2275,16 @@ body {
                     <div class="tutoring-card">
                         <div class="card-header education">
                             <div class="header-bg"></div>
-                            <i class="fas fa-book-open"></i>
+                            <span class="icon"><svg><use href="#icon-book-open"/></svg></span>
                             <h3>教育学专升本</h3>
                         </div>
                         <div class="card-body">
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>教育学原理</span>
                             </div>
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>课程与方法论</span>
                             </div>
                             <p class="card-note">熟悉考试大纲，精准把握重难点</p>
@@ -1144,24 +2293,24 @@ body {
                     <div class="tutoring-card">
                         <div class="card-header computer">
                             <div class="header-bg"></div>
-                            <i class="fas fa-laptop-code"></i>
+                            <span class="icon"><svg><use href="#icon-laptop"/></svg></span>
                             <h3>计算机专升本</h3>
                         </div>
                         <div class="card-body">
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>C语言程序设计</span>
                             </div>
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>数据结构</span>
                             </div>
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>计算机网络</span>
                             </div>
                             <div class="subject-item">
-                                <i class="fas fa-check-circle"></i>
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
                                 <span>操作系统</span>
                             </div>
                             <p class="card-note">注重实践，代码讲解清晰易懂</p>
@@ -1173,14 +2322,14 @@ body {
             <!-- 教育背景 -->
             <section class="section education-bg">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-cap"/></svg></span></span>
                     <span>教育背景</span>
                     <span class="title-line"></span>
                 </h2>
                 <div class="timeline">
                     <div class="timeline-item">
                         <div class="timeline-marker">
-                            <i class="fas fa-award"></i>
+                            <span class="icon"><svg><use href="#icon-award"/></svg></span>
                         </div>
                         <div class="timeline-content">
                             <div class="time-range">2017.09 - 2020.12</div>
@@ -1191,7 +2340,7 @@ body {
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-marker">
-                            <i class="fas fa-graduation-cap"></i>
+                            <span class="icon"><svg><use href="#icon-cap"/></svg></span>
                         </div>
                         <div class="timeline-content">
                             <div class="time-range">2009.09 - 2013.06</div>
@@ -1206,7 +2355,7 @@ body {
             <!-- 工作经历 -->
             <section class="section work">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-briefcase"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-briefcase"/></svg></span></span>
                     <span>工作经历</span>
                     <span class="title-line"></span>
                 </h2>
@@ -1255,7 +2404,7 @@ body {
             <!-- 教学成果 -->
             <section class="section achievements">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-trophy"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-trophy"/></svg></span></span>
                     <span>教学成果</span>
                     <span class="title-line"></span>
                 </h2>
@@ -1282,7 +2431,7 @@ body {
             <!-- 学术成果 -->
             <section class="section publications">
                 <h2 class="main-section-title">
-                    <span class="title-icon"><i class="fas fa-file-alt"></i></span>
+                    <span class="title-icon"><span class="icon"><svg><use href="#icon-file"/></svg></span></span>
                     <span>学术论文</span>
                     <span class="title-line"></span>
                 </h2>
