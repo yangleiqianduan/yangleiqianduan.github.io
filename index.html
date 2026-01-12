@@ -1,221 +1,1337 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="keywords"
-      content="antd,umi,umijs,实地邻里,脚手架,布局, 实地邻里,项目,Pro,admin,控制台,主页,开箱即用,中后台,解决方案,组件库"
-    />
-    <meta
-      name="description"
-      content="
-    An out-of-box UI solution for enterprise applications as a React boilerplate."
-    />
-    <meta
-      name="description"
-      content="
-      开箱即用的中台前端/设计解决方案。"
-    />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <title>陈路遥</title>
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="/umi.9372b12a.css" />
-    <script>
-      window.routerBase = "/";
-    </script>
-    <script>
-      //! umi version: 3.2.24
-    </script>
-  </head>
-  <body>
-    <noscript>Out-of-the-box mid-stage front/design solution!</noscript>
-    <div id="root">
-      <style>
-        html,
-        body,
-        #root {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        #root {
-          background-image: url("/home_bg.png");
-          background-repeat: no-repeat;
-          background-size: 100% auto;
-        }
-        .page-loading-warp {
-          padding: 98px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        .ant-spin {
-          -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-          margin: 0;
-          padding: 0;
-          color: rgba(0, 0, 0, 0.65);
-          font-size: 14px;
-          font-variant: tabular-nums;
-          line-height: 1.5;
-          list-style: none;
-          -webkit-font-feature-settings: "tnum";
-          font-feature-settings: "tnum";
-          position: absolute;
-          display: none;
-          color: #1890ff;
-          text-align: center;
-          vertical-align: middle;
-          opacity: 0;
-          -webkit-transition: -webkit-transform 0.3s
-            cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          transition: -webkit-transform 0.3s
-            cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-          transition: transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86),
-            -webkit-transform 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
-        }
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>杨波 - 兼职教师简历</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+/* ========================================
+   杨波 - 兼职教师简历样式表
+   设计风格：科技感 + 专业教育气质
+   ======================================== */
 
-        .ant-spin-spinning {
-          position: static;
-          display: inline-block;
-          opacity: 1;
-        }
+/* CSS 变量定义 */
+:root {
+    --primary-color: #0a192f;
+    --primary-light: #112240;
+    --primary-dark: #020c1b;
+    --accent-color: #64ffda;
+    --accent-secondary: #7b68ee;
+    --neon-blue: #00d4ff;
+    --neon-purple: #bd00ff;
+    --text-dark: #ccd6f6;
+    --text-medium: #8892b0;
+    --text-light: #a8b2d1;
+    --bg-light: #0a192f;
+    --bg-white: #112240;
+    --border-color: #233554;
+    --success-color: #64ffda;
+    --sidebar-width: 300px;
+    --glow-color: rgba(100, 255, 218, 0.3);
+}
 
-        .ant-spin-dot {
-          position: relative;
-          display: inline-block;
-          font-size: 20px;
-          width: 20px;
-          height: 20px;
-        }
+/* 重置样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        .ant-spin-dot-item {
-          position: absolute;
-          display: block;
-          width: 9px;
-          height: 9px;
-          background-color: #1890ff;
-          border-radius: 100%;
-          -webkit-transform: scale(0.75);
-          -ms-transform: scale(0.75);
-          transform: scale(0.75);
-          -webkit-transform-origin: 50% 50%;
-          -ms-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
-          opacity: 0.3;
-          -webkit-animation: antSpinMove 1s infinite linear alternate;
-          animation: antSpinMove 1s infinite linear alternate;
-        }
+body {
+    font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--primary-dark);
+    min-height: 100vh;
+    padding: 40px 20px;
+    line-height: 1.6;
+    color: var(--text-dark);
+    position: relative;
+    overflow-x: hidden;
+}
 
-        .ant-spin-dot-item:nth-child(1) {
-          top: 0;
-          left: 0;
-        }
+/* 科技感背景 */
+.tech-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
 
-        .ant-spin-dot-item:nth-child(2) {
-          top: 0;
-          right: 0;
-          -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-        }
+.grid-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(rgba(100, 255, 218, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(100, 255, 218, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: gridMove 20s linear infinite;
+}
 
-        .ant-spin-dot-item:nth-child(3) {
-          right: 0;
-          bottom: 0;
-          -webkit-animation-delay: 0.8s;
-          animation-delay: 0.8s;
-        }
+@keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(50px, 50px); }
+}
 
-        .ant-spin-dot-item:nth-child(4) {
-          bottom: 0;
-          left: 0;
-          -webkit-animation-delay: 1.2s;
-          animation-delay: 1.2s;
-        }
+.floating-particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
-        .ant-spin-dot-spin {
-          -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
-          -webkit-animation: antRotate 1.2s infinite linear;
-          animation: antRotate 1.2s infinite linear;
-        }
+.floating-particles span {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--accent-color), 0 0 20px var(--accent-color);
+    animation: float 15s infinite;
+    opacity: 0.6;
+}
 
-        .ant-spin-lg .ant-spin-dot {
-          font-size: 32px;
-          width: 32px;
-          height: 32px;
-        }
+.floating-particles span:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 12s; }
+.floating-particles span:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 14s; }
+.floating-particles span:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 16s; }
+.floating-particles span:nth-child(4) { left: 40%; animation-delay: 1s; animation-duration: 13s; }
+.floating-particles span:nth-child(5) { left: 50%; animation-delay: 3s; animation-duration: 15s; }
+.floating-particles span:nth-child(6) { left: 60%; animation-delay: 5s; animation-duration: 11s; }
+.floating-particles span:nth-child(7) { left: 70%; animation-delay: 2.5s; animation-duration: 17s; }
+.floating-particles span:nth-child(8) { left: 80%; animation-delay: 1.5s; animation-duration: 14s; }
+.floating-particles span:nth-child(9) { left: 85%; animation-delay: 4.5s; animation-duration: 12s; }
+.floating-particles span:nth-child(10) { left: 95%; animation-delay: 0.5s; animation-duration: 16s; }
 
-        .ant-spin-lg .ant-spin-dot i {
-          width: 14px;
-          height: 14px;
-        }
+@keyframes float {
+    0%, 100% { transform: translateY(100vh) scale(0); opacity: 0; }
+    10% { opacity: 0.6; }
+    90% { opacity: 0.6; }
+    100% { transform: translateY(-100vh) scale(1); opacity: 0; }
+}
 
-        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-          .ant-spin-blur {
-            background: #fff;
-            opacity: 0.5;
-          }
-        }
+/* 简历容器 */
+.resume-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    background: var(--bg-white);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px var(--border-color),
+        0 0 40px rgba(100, 255, 218, 0.1);
+    position: relative;
+    z-index: 1;
+}
 
-        @-webkit-keyframes antSpinMove {
-          to {
-            opacity: 1;
-          }
-        }
+/* ========================================
+   左侧边栏
+   ======================================== */
+.sidebar {
+    width: var(--sidebar-width);
+    background: linear-gradient(180deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: var(--text-dark);
+    padding: 40px 24px;
+    flex-shrink: 0;
+    border-right: 1px solid var(--border-color);
+    position: relative;
+}
 
-        @keyframes antSpinMove {
-          to {
-            opacity: 1;
-          }
-        }
+.sidebar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, var(--accent-color), transparent);
+    opacity: 0.5;
+}
 
-        @-webkit-keyframes antRotate {
-          to {
-            -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
-          }
-        }
+/* 个人头像区域 */
+.profile-section {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 30px;
+}
 
-        @keyframes antRotate {
-          to {
-            -webkit-transform: rotate(405deg);
-            transform: rotate(405deg);
-          }
-        }
-      </style>
-      <div
-        style="
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-          min-height: 420px;
-          height: 100%;
-        "
-      >
-        <div class="page-loading-warp">
-          <div class="ant-spin ant-spin-lg ant-spin-spinning">
-            <span class="ant-spin-dot ant-spin-dot-spin"
-              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
-              ><i class="ant-spin-dot-item"></i><i class="ant-spin-dot-item"></i
-            ></span>
-          </div>
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+}
+
+.avatar-ring {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: var(--accent-color);
+    border-right-color: var(--neon-purple);
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-dark) 100%);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 
+        0 0 30px rgba(100, 255, 218, 0.2),
+        inset 0 0 20px rgba(100, 255, 218, 0.1);
+    border: 2px solid var(--accent-color);
+}
+
+.avatar-text {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 0 20px var(--accent-color);
+}
+
+.name {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+    color: var(--text-dark);
+}
+
+.title {
+    font-size: 13px;
+    color: var(--text-medium);
+    font-weight: 300;
+    margin-bottom: 16px;
+}
+
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(100, 255, 218, 0.1);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--accent-color);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+}
+
+.pulse {
+    width: 8px;
+    height: 8px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.7); }
+    50% { box-shadow: 0 0 0 8px rgba(100, 255, 218, 0); }
+}
+
+/* 侧边栏通用样式 */
+.section-title {
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title i {
+    font-size: 14px;
+}
+
+/* 联系方式 */
+.contact-section {
+    margin-bottom: 30px;
+}
+
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 13px;
+    color: var(--text-light);
+    border-bottom: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.contact-list li:last-child {
+    border-bottom: none;
+}
+
+.contact-list li:hover {
+    color: var(--accent-color);
+    padding-left: 8px;
+}
+
+.contact-list li i {
+    width: 20px;
+    text-align: center;
+    color: var(--accent-color);
+    font-size: 14px;
+}
+
+/* 资质证书 */
+.certificates-section {
+    margin-bottom: 30px;
+}
+
+.cert-list {
+    list-style: none;
+}
+
+.cert-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 12px;
+    color: var(--text-light);
+    line-height: 1.5;
+    transition: all 0.3s ease;
+}
+
+.cert-list li:hover {
+    color: var(--text-dark);
+    transform: translateX(4px);
+}
+
+.cert-list li i {
+    color: var(--accent-color);
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+/* 技能进度条 */
+.skills-section {
+    margin-bottom: 0;
+}
+
+.skill-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skill-item {
+    width: 100%;
+}
+
+.skill-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: var(--text-light);
+    margin-bottom: 6px;
+}
+
+.skill-bar {
+    height: 6px;
+    background: var(--border-color);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    background: linear-gradient(90deg, var(--accent-color), var(--neon-blue));
+    border-radius: 3px;
+    position: relative;
+    animation: skillLoad 1.5s ease-out;
+}
+
+@keyframes skillLoad {
+    from { width: 0 !important; }
+}
+
+.skill-progress::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ========================================
+   主内容区域
+   ======================================== */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    background: var(--bg-light);
+}
+
+.section {
+    margin-bottom: 36px;
+}
+
+.section:last-child {
+    margin-bottom: 0;
+}
+
+.main-section-title {
+    font-family: 'Orbitron', 'Noto Sans SC', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent-color), var(--neon-blue));
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-dark);
+    font-size: 16px;
+}
+
+.title-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--border-color), transparent);
+}
+
+/* 求职意向 */
+.intention-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+}
+
+.intention-item {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.intention-item .label {
+    font-size: 11px;
+    color: var(--text-medium);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.intention-item .value {
+    font-size: 14px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.intention-item .value.highlight {
+    color: var(--accent-color);
+    font-weight: 600;
+}
+
+/* 教学优势 */
+.advantage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.advantage-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 20px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.advantage-card:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.1);
+}
+
+.adv-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(100, 255, 218, 0.1), rgba(0, 212, 255, 0.1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    font-size: 20px;
+    color: var(--accent-color);
+}
+
+.advantage-card h3 {
+    font-size: 13px;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.advantage-card p {
+    font-size: 11px;
+    color: var(--text-medium);
+    line-height: 1.5;
+}
+
+/* 辅导方向 */
+.tutoring-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tutoring-card {
+    background: var(--bg-white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.tutoring-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    border-color: var(--accent-color);
+}
+
+.card-header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-header .header-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.1;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.card-header.education {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.card-header.computer {
+    background: linear-gradient(135deg, #00b4db 0%, #0083b0 100%);
+}
+
+.card-header i {
+    font-size: 24px;
+    position: relative;
+    z-index: 1;
+}
+
+.card-header h3 {
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.subject-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+.subject-item i {
+    color: var(--accent-color);
+    font-size: 12px;
+}
+
+.card-note {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px dashed var(--border-color);
+    font-size: 11px;
+    color: var(--text-medium);
+    font-style: italic;
+}
+
+/* 教育背景时间线 */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--accent-color), var(--border-color));
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 24px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--bg-light);
+    border: 2px solid var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color);
+    font-size: 10px;
+    box-shadow: 0 0 15px rgba(100, 255, 218, 0.3);
+}
+
+.timeline-content {
+    background: var(--bg-white);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.timeline-content:hover {
+    border-color: var(--accent-color);
+}
+
+.time-range {
+    font-family: 'Orbitron', monospace;
+    font-size: 12px;
+    color: var(--accent-color);
+    font-weight: 500;
+    margin-bottom: 6px;
+}
+
+.timeline-content h3 {
+    font-size: 15px;
+    color: var(--text-dark);
+    margin-bottom: 4px;
+}
+
+.degree {
+    font-size: 13px;
+    color: var(--text-medium);
+    margin-bottom: 8px;
+}
+
+.edu-detail {
+    font-size: 12px;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+/* 工作经历 */
+.work-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.work-item {
+    background: var(--bg-white);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--accent-color);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.work-item:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.work-item.current {
+    border-left-color: var(--neon-purple);
+    background: linear-gradient(135deg, var(--bg-white), rgba(123, 104, 238, 0.05));
+}
+
+.work-badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: linear-gradient(135deg, var(--neon-purple), #9d4edd);
+    color: #fff;
+    font-size: 10px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+    padding-right: 60px;
+}
+
+.work-header h3 {
+    font-size: 16px;
+    color: var(--text-dark);
+}
+
+.work-time {
+    font-family: 'Orbitron', monospace;
+    font-size: 11px;
+    color: var(--text-medium);
+    background: rgba(100, 255, 218, 0.1);
+    padding: 4px 12px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.work-position {
+    font-size: 14px;
+    color: var(--accent-color);
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.work-duties {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.work-duties li {
+    font-size: 13px;
+    color: var(--text-light);
+    padding-left: 20px;
+    position: relative;
+    line-height: 1.6;
+}
+
+.work-duties li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* 教学成果统计 */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.stat-card {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px 16px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    border-color: var(--accent-color);
+    transform: scale(1.05);
+}
+
+.stat-number {
+    font-family: 'Orbitron', monospace;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: var(--text-medium);
+}
+
+/* 学术成果 */
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.pub-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    transition: all 0.3s ease;
+}
+
+.pub-item:hover {
+    border-color: var(--accent-color);
+    transform: translateX(8px);
+}
+
+.pub-year {
+    font-family: 'Orbitron', monospace;
+    font-size: 12px;
+    color: var(--accent-color);
+    background: rgba(100, 255, 218, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.pub-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.pub-title {
+    font-size: 13px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.pub-info {
+    font-size: 12px;
+    color: var(--text-medium);
+}
+
+/* ========================================
+   响应式设计
+   ======================================== */
+@media (max-width: 900px) {
+    .advantage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px 12px;
+    }
+
+    .resume-container {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 30px 20px;
+    }
+
+    .main-content {
+        padding: 30px 20px;
+    }
+
+    .tutoring-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advantage-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .work-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-right: 0;
+    }
+    
+    .work-badge {
+        position: static;
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+}
+
+/* ========================================
+   打印样式
+   ======================================== */
+@media print {
+    body {
+        background: #fff;
+        padding: 0;
+    }
+
+    .tech-bg {
+        display: none;
+    }
+
+    .resume-container {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+    }
+
+    .sidebar {
+        background: #1a365d !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .avatar-ring {
+        animation: none;
+    }
+    
+    .skill-progress::after {
+        animation: none;
+    }
+
+    .floating-particles,
+    .grid-lines {
+        display: none;
+    }
+
+    .tutoring-card:hover,
+    .pub-item:hover,
+    .advantage-card:hover,
+    .stat-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- 科技感背景粒子 -->
+    <div class="tech-bg">
+        <div class="grid-lines"></div>
+        <div class="floating-particles">
+            <span></span><span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span><span></span>
         </div>
-        <div
-          style="display: flex; justify-content: center; align-items: center"
-        >
-          陈路遥
-        </div>
-      </div>
     </div>
 
-    <script src="/umi.adac69f2.js"></script>
-  </body>
+    <div class="resume-container">
+        <!-- 左侧边栏 -->
+        <aside class="sidebar">
+            <div class="profile-section">
+                <div class="avatar-wrapper">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar">
+                        <span class="avatar-text">杨</span>
+                    </div>
+                </div>
+                <h1 class="name">杨波</h1>
+                <p class="title">硕士 · 信息技术教师</p>
+                <div class="status-badge">
+                    <span class="pulse"></span>
+                    <span>在职 · 可兼职</span>
+                </div>
+            </div>
+
+            <div class="contact-section">
+                <h2 class="section-title"><i class="fas fa-satellite-dish"></i> 联系方式</h2>
+                <ul class="contact-list">
+                    <li><i class="fas fa-phone"></i> <span>159-4406-3637</span></li>
+                    <li><i class="fas fa-envelope"></i> <span>375479842@qq.com</span></li>
+                    <li><i class="fas fa-map-marker-alt"></i> <span>吉林省</span></li>
+                </ul>
+            </div>
+
+            <div class="certificates-section">
+                <h2 class="section-title"><i class="fas fa-shield-alt"></i> 资质认证</h2>
+                <ul class="cert-list">
+                    <li><i class="fas fa-check-circle"></i> 高中教师资格证</li>
+                    <li><i class="fas fa-check-circle"></i> 大学教师资格证</li>
+                    <li><i class="fas fa-brain"></i> 中科院心理咨询师证</li>
+                    <li><i class="fas fa-shopping-cart"></i> 电子商务师（中级）</li>
+                    <li><i class="fas fa-language"></i> CET-4</li>
+                </ul>
+            </div>
+
+            <div class="skills-section">
+                <h2 class="section-title"><i class="fas fa-microchip"></i> 核心技能</h2>
+                <div class="skill-bars">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>课程设计与开发</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>线上教学工具</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>学生心理辅导</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>考试重点把握</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- 右侧主内容 -->
+        <main class="main-content">
+            <!-- 求职意向 -->
+            <section class="section intention">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-crosshairs"></i></span>
+                    <span>求职意向</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="intention-card">
+                    <div class="intention-item">
+                        <span class="label">目标职位</span>
+                        <span class="value highlight">兼职教师（专升本/考研辅导）</span>
+                    </div>
+                    <div class="intention-item">
+                        <span class="label">工作方式</span>
+                        <span class="value">线上一对一教学 · 时间灵活</span>
+                    </div>
+                    <div class="intention-item">
+                        <span class="label">可授科目</span>
+                        <span class="value">教育学 · 计算机科学</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教学优势 -->
+            <section class="section advantages">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-star"></i></span>
+                    <span>教学优势</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="advantage-grid">
+                    <div class="advantage-card">
+                        <div class="adv-icon"><i class="fas fa-user-graduate"></i></div>
+                        <h3>11年教学经验</h3>
+                        <p>从小学到高职院校，完整覆盖各学段教学</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><i class="fas fa-book-reader"></i></div>
+                        <h3>双学科背景</h3>
+                        <p>计算机本科+教育学硕士，跨学科辅导能力强</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><i class="fas fa-heart"></i></div>
+                        <h3>心理咨询资质</h3>
+                        <p>关注学生心理状态，提供学业规划与激励</p>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><i class="fas fa-flask"></i></div>
+                        <h3>教研能力突出</h3>
+                        <p>发表6篇学术论文，持续优化教学方法</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 辅导方向 -->
+            <section class="section tutoring">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-chalkboard-teacher"></i></span>
+                    <span>辅导方向</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="tutoring-grid">
+                    <div class="tutoring-card">
+                        <div class="card-header education">
+                            <div class="header-bg"></div>
+                            <i class="fas fa-book-open"></i>
+                            <h3>教育学专升本</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>教育学原理</span>
+                            </div>
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>课程与方法论</span>
+                            </div>
+                            <p class="card-note">熟悉考试大纲，精准把握重难点</p>
+                        </div>
+                    </div>
+                    <div class="tutoring-card">
+                        <div class="card-header computer">
+                            <div class="header-bg"></div>
+                            <i class="fas fa-laptop-code"></i>
+                            <h3>计算机专升本</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>C语言程序设计</span>
+                            </div>
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>数据结构</span>
+                            </div>
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>计算机网络</span>
+                            </div>
+                            <div class="subject-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>操作系统</span>
+                            </div>
+                            <p class="card-note">注重实践，代码讲解清晰易懂</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教育背景 -->
+            <section class="section education-bg">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-graduation-cap"></i></span>
+                    <span>教育背景</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="time-range">2017.09 - 2020.12</div>
+                            <h3>长春师范大学</h3>
+                            <p class="degree">硕士 · 职业技术教育（信息技术）</p>
+                            <p class="edu-detail">深入研究职业教育教学方法，完成多项教学改革课题</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="time-range">2009.09 - 2013.06</div>
+                            <h3>长春师范大学</h3>
+                            <p class="degree">本科 · 计算机科学与技术</p>
+                            <p class="edu-detail">系统学习计算机专业核心课程，奠定扎实技术基础</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 工作经历 -->
+            <section class="section work">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-briefcase"></i></span>
+                    <span>工作经历</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="work-list">
+                    <div class="work-item current">
+                        <div class="work-badge">当前</div>
+                        <div class="work-header">
+                            <h3>某区域重点学校</h3>
+                            <span class="work-time">2024.08 - 至今</span>
+                        </div>
+                        <p class="work-position">信息技术教师</p>
+                        <ul class="work-duties">
+                            <li>负责信息技术课程日常教学，班级平均成绩提升显著</li>
+                            <li>参与学校信息化建设项目，推动教学数字化转型</li>
+                            <li>组织学生参加信息技术竞赛，多名学生获得省市级奖项</li>
+                        </ul>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>长春东方职业学院</h3>
+                            <span class="work-time">2022.03 - 2024.07</span>
+                        </div>
+                        <p class="work-position">计算机教师</p>
+                        <ul class="work-duties">
+                            <li>主讲《计算机应用基础》《C语言程序设计》等课程</li>
+                            <li>采用任务驱动教学法，学生实操能力大幅提升</li>
+                            <li>参与课程思政建设，将职业素养融入专业教学</li>
+                            <li>指导学生考取计算机等级证书，通过率达85%以上</li>
+                        </ul>
+                    </div>
+                    <div class="work-item">
+                        <div class="work-header">
+                            <h3>汽开区实验小学</h3>
+                            <span class="work-time">2013.09 - 2017.07</span>
+                        </div>
+                        <p class="work-position">教师</p>
+                        <ul class="work-duties">
+                            <li>从事基础教育教学工作，培养学生良好学习习惯</li>
+                            <li>积累了丰富的课堂管理和学生沟通经验</li>
+                            <li>多次获得"优秀教师"荣誉称号</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 教学成果 -->
+            <section class="section achievements">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-trophy"></i></span>
+                    <span>教学成果</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="11">11</div>
+                        <div class="stat-label">年教学经验</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">篇学术论文</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">85%+</div>
+                        <div class="stat-label">证书通过率</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">学段教学覆盖</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 学术成果 -->
+            <section class="section publications">
+                <h2 class="main-section-title">
+                    <span class="title-icon"><i class="fas fa-file-alt"></i></span>
+                    <span>学术论文</span>
+                    <span class="title-line"></span>
+                </h2>
+                <div class="publication-list">
+                    <div class="pub-item">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《任务驱动法在高职计算机应用基础教学中的运用研究》</span>
+                            <span class="pub-info">新视线·建筑与电力</span>
+                        </div>
+                    </div>
+                    <div class="pub-item">
+                        <div class="pub-year">2024</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《成果导向理念下的高职计算机应用基础课程研究》</span>
+                            <span class="pub-info">探索科学</span>
+                        </div>
+                    </div>
+                    <div class="pub-item">
+                        <div class="pub-year">2023</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《新时代下职业学校信息技术应用课程体系思政建设研究》</span>
+                            <span class="pub-info">科普天地</span>
+                        </div>
+                    </div>
+                    <div class="pub-item">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《大数据背景下基于MOOC的职业教育教学模式研究》</span>
+                            <span class="pub-info">科技创新导报</span>
+                        </div>
+                    </div>
+                    <div class="pub-item">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《论高等教育与职业技术教育的"跨界"生成》</span>
+                            <span class="pub-info">科技资讯</span>
+                        </div>
+                    </div>
+                    <div class="pub-item">
+                        <div class="pub-year">2018</div>
+                        <div class="pub-content">
+                            <span class="pub-title">《我国中等职业教育的改革与发展及其对我们的启示》</span>
+                            <span class="pub-info">现代职业教育</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
 </html>
