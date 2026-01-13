@@ -1020,6 +1020,69 @@ body {
     gap: 16px;
 }
 
+/* 技能词云样式 */
+.skill-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 5px;
+    padding: 6px 3px;
+    min-height: 90px;
+}
+
+.skill-cloud .tag {
+    display: inline-block;
+    padding: 2px 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    cursor: default;
+    white-space: nowrap;
+    background: transparent;
+}
+
+/* 核心关键词 - 最大最亮 */
+.skill-cloud .tag.xl {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
+}
+
+/* 重要关键词 - 大号 */
+.skill-cloud .tag.lg {
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(0, 255, 200, 0.9);
+}
+
+/* 常规关键词 - 中号 */
+.skill-cloud .tag.md {
+    font-size: 10px;
+    font-weight: 400;
+    color: rgba(0, 255, 200, 0.7);
+}
+
+/* 辅助关键词 - 小号 */
+.skill-cloud .tag.sm {
+    font-size: 8px;
+    font-weight: 400;
+    color: rgba(0, 255, 200, 0.5);
+}
+
+/* 填充词 - 最小 */
+.skill-cloud .tag.xs {
+    font-size: 7px;
+    font-weight: 300;
+    color: rgba(0, 255, 200, 0.35);
+}
+
+.skill-cloud .tag:hover {
+    color: var(--accent-color) !important;
+    text-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
+    transform: scale(1.1);
+}
+
 .skill-item {
     width: 100%;
     padding: 10px 12px;
@@ -2511,35 +2574,37 @@ body {
 
             <div class="skills-section">
                 <h2 class="section-title"><span class="icon"><svg><use href="#icon-chip"/></svg></span> 核心技能</h2>
-                <div class="skill-bars">
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>信息技术教学</span>
-                            <span>95%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Python/数据结构</span>
-                            <span>92%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>Office办公软件</span>
-                            <span>94%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 94%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>多媒体课件制作</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                    </div>
+                <div class="skill-cloud">
+                    <span class="tag sm">数据库</span>
+                    <span class="tag xl">信息技术</span>
+                    <span class="tag xs">网络</span>
+                    <span class="tag md">课件制作</span>
+                    <span class="tag sm">编程</span>
+                    <span class="tag lg">Python</span>
+                    <span class="tag xs">算法</span>
+                    <span class="tag md">操作系统</span>
+                    <span class="tag xl">教学设计</span>
+                    <span class="tag sm">Office</span>
+                    <span class="tag xs">数据库</span>
+                    <span class="tag lg">数据结构</span>
+                    <span class="tag sm">教育学</span>
+                    <span class="tag md">计算机网络</span>
+                    <span class="tag xs">课堂</span>
+                    <span class="tag lg">课堂管理</span>
+                    <span class="tag sm">多媒体</span>
+                    <span class="tag xs">Python</span>
+                    <span class="tag md">图形化编程</span>
+                    <span class="tag xl">编程教学</span>
+                    <span class="tag xs">Office</span>
+                    <span class="tag sm">网络基础</span>
+                    <span class="tag lg">信息素养</span>
+                    <span class="tag xs">教学</span>
+                    <span class="tag md">数据库基础</span>
+                    <span class="tag sm">Scratch</span>
+                    <span class="tag xs">系统</span>
+                    <span class="tag md">教研能力</span>
+                    <span class="tag xs">课件</span>
+                    <span class="tag sm">计算思维</span>
                 </div>
             </div>
         </aside>
