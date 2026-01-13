@@ -732,6 +732,120 @@ body {
     box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
 }
 
+/* 教育背景 - 左侧栏样式 */
+.education-sidebar {
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.5) 0%, 
+        rgba(22, 33, 62, 0.4) 100%);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-radius: 16px;
+    padding: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+    transition: all 0.4s ease;
+    animation: cardFadeIn 0.6s ease-out 0.05s both;
+}
+
+.education-sidebar:hover {
+    border-color: rgba(0, 255, 200, 0.15);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(0, 255, 200, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+.edu-list {
+    list-style: none;
+}
+
+.edu-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--text-light);
+    background: linear-gradient(135deg, 
+        rgba(26, 26, 46, 0.35) 0%, 
+        rgba(22, 33, 62, 0.25) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.edu-list li:last-child {
+    margin-bottom: 0;
+}
+
+.edu-list li:hover {
+    color: var(--accent-color);
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.08) 0%, 
+        rgba(76, 201, 240, 0.05) 100%);
+    border-color: rgba(0, 255, 200, 0.15);
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(0, 255, 200, 0.08);
+}
+
+.edu-list li .icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.12) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    border-radius: 10px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 255, 200, 0.1);
+    transition: all 0.3s ease;
+}
+
+.edu-list li .icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.edu-list li:hover .icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+.edu-list li .edu-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.edu-list li .edu-school {
+    font-weight: 500;
+    color: var(--text-dark);
+    font-size: 13px;
+}
+
+.edu-list li .edu-degree {
+    font-size: 12px;
+    color: var(--accent-color);
+    opacity: 0.9;
+}
+
+.edu-list li .edu-time {
+    font-size: 11px;
+    color: var(--text-muted);
+    opacity: 0.7;
+}
+
 /* 资质证书 - iOS玻璃卡片 */
 .certificates-section {
     margin-bottom: 30px;
@@ -765,8 +879,8 @@ body {
 
 .cert-list li {
     display: flex;
-    align-items: center;
-    gap: 12px;
+    align-items: flex-start;
+    gap: 10px;
     padding: 10px 12px;
     margin-bottom: 6px;
     font-size: 12px;
@@ -780,6 +894,44 @@ body {
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cert-list li .icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, 
+        rgba(0, 255, 200, 0.12) 0%, 
+        rgba(76, 201, 240, 0.08) 100%);
+    border-radius: 10px;
+    color: var(--accent-color);
+    flex-shrink: 0;
+    border: 1px solid rgba(0, 255, 200, 0.1);
+    transition: all 0.3s ease;
+}
+
+.cert-list li .icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.cert-list li:hover .icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 255, 200, 0.3);
+}
+
+.cert-list li .cert-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cert-list li .cert-sub {
+    font-size: 11px;
+    color: var(--accent-color);
+    opacity: 0.8;
 }
 
 .cert-list li:last-child {
@@ -1100,12 +1252,12 @@ body {
         rgba(22, 33, 62, 0.5) 100%);
     backdrop-filter: blur(30px) saturate(180%);
     -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border-radius: 22px;
-    padding: 28px;
+    border-radius: 18px;
+    padding: 20px;
     border: 1px solid rgba(255, 255, 255, 0.08);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
     box-shadow: 
         0 8px 32px rgba(0, 0, 0, 0.25),
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
@@ -1354,6 +1506,8 @@ body {
 }
 
 .tutoring-card {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, 
         rgba(26, 26, 46, 0.55) 0%, 
         rgba(22, 33, 62, 0.45) 100%);
@@ -1378,10 +1532,10 @@ body {
 }
 
 .card-header {
-    padding: 20px;
+    padding: 14px 16px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 10px;
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -1433,39 +1587,48 @@ body {
 }
 
 .card-header i {
-    font-size: 24px;
+    font-size: 18px;
     position: relative;
     z-index: 1;
 }
 
+.card-header .icon {
+    width: 20px;
+    height: 20px;
+}
+
 .card-header h3 {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     position: relative;
     z-index: 1;
 }
 
 .card-body {
-    padding: 20px;
+    padding: 14px 16px;
     background: linear-gradient(180deg, 
         rgba(26, 26, 46, 0.3) 0%, 
         rgba(22, 33, 62, 0.2) 100%);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .subject-item {
     display: flex;
     align-items: center;
-    gap: 12px;
-    padding: 10px 14px;
-    margin-bottom: 8px;
-    font-size: 13px;
+    gap: 10px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    font-size: 12px;
     color: var(--text-light);
     background: linear-gradient(135deg, 
         rgba(26, 26, 46, 0.4) 0%, 
         rgba(22, 33, 62, 0.3) 100%);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.03);
     transition: all 0.3s ease;
 }
@@ -1484,17 +1647,17 @@ body {
 }
 
 .subject-item i {
-    width: 26px;
-    height: 26px;
+    width: 22px;
+    height: 22px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, 
         rgba(0, 255, 200, 0.12) 0%, 
         rgba(76, 201, 240, 0.08) 100%);
-    border-radius: 8px;
+    border-radius: 6px;
     color: var(--accent-color);
-    font-size: 11px;
+    font-size: 10px;
     border: 1px solid rgba(0, 255, 200, 0.1);
     transition: all 0.3s ease;
 }
@@ -1505,12 +1668,12 @@ body {
 }
 
 .card-note {
-    margin-top: 14px;
-    padding: 12px;
+    margin-top: 10px;
+    padding: 10px;
     background: linear-gradient(135deg, 
         rgba(0, 255, 200, 0.04) 0%, 
         rgba(76, 201, 240, 0.02) 100%);
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px dashed rgba(0, 255, 200, 0.15);
     font-size: 11px;
     color: var(--text-medium);
@@ -1718,9 +1881,7 @@ body {
 }
 
 .work-badge {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    display: inline-block;
     background: linear-gradient(135deg, 
         var(--accent-color) 0%, 
         var(--neon-cyan) 50%, 
@@ -1728,7 +1889,7 @@ body {
     background-size: 200% 200%;
     color: var(--primary-dark);
     font-size: 10px;
-    padding: 6px 14px;
+    padding: 4px 12px;
     border-radius: 12px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1737,6 +1898,8 @@ body {
     box-shadow: 
         0 4px 15px rgba(0, 255, 200, 0.4),
         0 0 20px rgba(0, 255, 200, 0.2);
+    margin-left: 10px;
+    vertical-align: middle;
 }
 
 @keyframes workBadgeGlow {
@@ -1755,9 +1918,16 @@ body {
 .work-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 8px;
-    padding-right: 60px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.work-time-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .work-header h3 {
@@ -2037,18 +2207,15 @@ body {
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
-        padding-right: 0;
     }
     
-    .work-badge {
-        position: static;
-        display: inline-block;
-        margin-bottom: 8px;
+    .work-time-wrapper {
+        flex-wrap: wrap;
     }
 }
 
 /* ========================================
-   流星效果 - 从右上到左下，尾巴指向右上
+   流星效果 - 从右上到左下
    ======================================== */
 .meteors {
     position: fixed;
@@ -2074,8 +2241,6 @@ body {
     will-change: transform, opacity;
 }
 
-/* 流星整体：左边是头（亮），右边是尾（暗）*/
-/* 旋转45度后：左下是头，右上是尾 */
 .meteor::before {
     content: '';
     position: absolute;
@@ -2093,7 +2258,6 @@ body {
     border-radius: 100px;
 }
 
-/* 流星头部发光点（在左边，旋转后在左下）*/
 .meteor::after {
     content: '';
     position: absolute;
@@ -2137,9 +2301,6 @@ body {
     pointer-events: none;
     z-index: 0;
     overflow: hidden;
-}
-
-.code-rain {
     perspective: 500px;
 }
 
@@ -2197,123 +2358,53 @@ body {
     }
 }
 
+/* ========================================
+   打印样式
+   ======================================== */
 @media print {
     .meteors, .code-rain {
         display: none !important;
     }
-
-    * {
-        -webkit-print-color-adjust: exact !important;
-        print-color-adjust: exact !important;
-        color-adjust: exact !important;
-    }
-
     body {
-        background: #fff !important;
-        padding: 0 !important;
-        margin: 0 !important;
+        background: #fff;
+        padding: 0;
     }
 
-    .tech-bg,
-    .floating-particles,
-    .grid-lines,
-    .aurora-glow {
-        display: none !important;
+    .tech-bg {
+        display: none;
     }
 
-    /* 保持左右结构 */
     .resume-container {
-        display: flex !important;
-        flex-direction: row !important;
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        max-width: 100% !important;
-        width: 100% !important;
-        background: #fff !important;
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
     }
 
     .sidebar {
-        width: 280px !important;
-        min-width: 280px !important;
-        flex-shrink: 0 !important;
-        background: linear-gradient(180deg, #0a192f 0%, #020c1b 100%) !important;
-        padding: 30px 20px !important;
+        background: #1a365d !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    
+    .avatar-ring {
+        animation: none;
+    }
+    
+    .skill-progress::after {
+        animation: none;
     }
 
-    .main-content {
-        flex: 1 !important;
-        padding: 30px !important;
-        background: #fff !important;
-    }
-
-    /* 禁用所有动画 */
-    .avatar-ring,
-    .avatar-wrapper::before,
-    .avatar-wrapper::after,
-    .skill-progress,
-    .skill-progress::after,
-    .status-badge .pulse,
-    .title-icon,
-    .title-line,
-    * {
-        animation: none !important;
-    }
-
-    /* 调整颜色确保可读性 */
-    .main-section-title,
-    .main-section-title .title-text,
-    h3, p {
-        color: #1a1a2e !important;
-    }
-
-    .intention-card,
-    .advantage-card,
-    .tutoring-card,
-    .timeline-content,
-    .work-item,
-    .stat-card,
-    .pub-item {
-        background: #f8f9fa !important;
-        border: 1px solid #e0e0e0 !important;
-        box-shadow: none !important;
-    }
-
-    .card-header.education,
-    .card-header.computer {
-        background: linear-gradient(135deg, #00b894 0%, #00cec9 100%) !important;
-    }
-
-    /* 确保网格布局在打印时正常 */
-    .advantage-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-    .stats-grid {
-        grid-template-columns: repeat(4, 1fr) !important;
-    }
-
-    .tutoring-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
-    }
-
-    .intention-card {
-        grid-template-columns: repeat(3, 1fr) !important;
-    }
-
-    /* 避免分页断开 */
-    .section,
-    .work-item,
-    .timeline-item,
-    .pub-item {
-        page-break-inside: avoid;
+    .floating-particles,
+    .grid-lines {
+        display: none;
     }
 
     .tutoring-card:hover,
     .pub-item:hover,
     .advantage-card:hover,
     .stat-card:hover {
-        transform: none !important;
-        box-shadow: none !important;
+        transform: none;
+        box-shadow: none;
     }
 }
     </style>
@@ -2385,11 +2476,33 @@ body {
                 </ul>
             </div>
 
+            <div class="education-sidebar">
+                <h2 class="section-title"><span class="icon"><svg><use href="#icon-cap"/></svg></span> 教育背景</h2>
+                <ul class="edu-list">
+                    <li>
+                        <span class="icon"><svg><use href="#icon-award"/></svg></span>
+                        <span class="edu-info">
+                            <span class="edu-school">长春师范大学</span>
+                            <span class="edu-degree">硕士 · 职业技术教育</span>
+                            <span class="edu-time">2017.09 - 2020.12</span>
+                        </span>
+                    </li>
+                    <li>
+                        <span class="icon"><svg><use href="#icon-cap"/></svg></span>
+                        <span class="edu-info">
+                            <span class="edu-school">长春师范大学</span>
+                            <span class="edu-degree">本科 · 计算机科学与技术</span>
+                            <span class="edu-time">2009.09 - 2013.06</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
             <div class="certificates-section">
-                <h2 class="section-title"><span class="icon"><svg><use href="#icon-shield"/></svg></span> 资质认证</h2>
+                <h2 class="section-title"><span class="icon"><svg><use href="#icon-shield"/></svg></span> 资格证书</h2>
                 <ul class="cert-list">
-                    <li><span class="icon"><svg><use href="#icon-check"/></svg></span> 高中教师资格证</li>
-                    <li><span class="icon"><svg><use href="#icon-check"/></svg></span> 大学教师资格证</li>
+                    <li><span class="icon"><svg><use href="#icon-book-reader"/></svg></span><span class="cert-text">高中教师资格证<span class="cert-sub">信息技术</span></span></li>
+                    <li><span class="icon"><svg><use href="#icon-graduate"/></svg></span><span class="cert-text">大学教师资格证<span class="cert-sub">计算机科学与技术</span></span></li>
                     <li><span class="icon"><svg><use href="#icon-brain"/></svg></span> 中科院心理咨询师证</li>
                     <li><span class="icon"><svg><use href="#icon-cart"/></svg></span> 电子商务师（中级）</li>
                     <li><span class="icon"><svg><use href="#icon-language"/></svg></span> CET-4</li>
@@ -2401,31 +2514,31 @@ body {
                 <div class="skill-bars">
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span>课程设计与开发</span>
+                            <span>信息技术教学</span>
                             <span>95%</span>
                         </div>
                         <div class="skill-bar"><div class="skill-progress" style="width: 95%"></div></div>
                     </div>
                     <div class="skill-item">
                         <div class="skill-header">
-                            <span>线上教学工具</span>
-                            <span>90%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>学生心理辅导</span>
-                            <span>85%</span>
-                        </div>
-                        <div class="skill-bar"><div class="skill-progress" style="width: 85%"></div></div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-header">
-                            <span>考试重点把握</span>
+                            <span>Python/数据结构</span>
                             <span>92%</span>
                         </div>
                         <div class="skill-bar"><div class="skill-progress" style="width: 92%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>Office办公软件</span>
+                            <span>94%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 94%"></div></div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span>多媒体课件制作</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="skill-progress" style="width: 90%"></div></div>
                     </div>
                 </div>
             </div>
@@ -2447,11 +2560,49 @@ body {
                     </div>
                     <div class="intention-item">
                         <span class="label">工作方式</span>
-                        <span class="value">线上一对一教学 · 时间灵活</span>
+                        <span class="value">线上教学 · 时间灵活</span>
                     </div>
-                    <div class="intention-item">
-                        <span class="label">可授科目</span>
-                        <span class="value">教育学 · 计算机科学</span>
+                </div>
+                <div class="tutoring-grid" style="margin-top: 20px;">
+                    <div class="tutoring-card">
+                        <div class="card-header education">
+                            <div class="header-bg"></div>
+                            <span class="icon"><svg><use href="#icon-book-open"/></svg></span>
+                            <h3>教育学</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="subject-item">
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
+                                <span>教育学原理</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
+                                <span>课程与方法论</span>
+                            </div>
+                            <p class="card-note">熟悉考试大纲，精准把握重难点</p>
+                        </div>
+                    </div>
+                    <div class="tutoring-card">
+                        <div class="card-header computer">
+                            <div class="header-bg"></div>
+                            <span class="icon"><svg><use href="#icon-laptop"/></svg></span>
+                            <h3>计算机科学</h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="subject-item">
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
+                                <span>数据结构</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
+                                <span>计算机网络</span>
+                            </div>
+                            <div class="subject-item">
+                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
+                                <span>操作系统</span>
+                            </div>
+                            <p class="card-note">注重实践，代码讲解清晰易懂</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -2475,102 +2626,14 @@ body {
                         <p>计算机本科+教育学硕士，跨学科辅导能力强</p>
                     </div>
                     <div class="advantage-card">
-                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-heart"/></svg></span></div>
-                        <h3>心理咨询资质</h3>
-                        <p>关注学生心理状态，提供学业规划与激励</p>
-                    </div>
-                    <div class="advantage-card">
                         <div class="adv-icon"><span class="icon"><svg><use href="#icon-flask"/></svg></span></div>
                         <h3>教研能力突出</h3>
                         <p>发表6篇学术论文，持续优化教学方法</p>
                     </div>
-                </div>
-            </section>
-
-            <!-- 辅导方向 -->
-            <section class="section tutoring">
-                <h2 class="main-section-title">
-                    <span class="title-icon"><span class="icon"><svg><use href="#icon-teacher"/></svg></span></span>
-                    <span>辅导方向</span>
-                    <span class="title-line"></span>
-                </h2>
-                <div class="tutoring-grid">
-                    <div class="tutoring-card">
-                        <div class="card-header education">
-                            <div class="header-bg"></div>
-                            <span class="icon"><svg><use href="#icon-book-open"/></svg></span>
-                            <h3>教育学专升本</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>教育学原理</span>
-                            </div>
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>课程与方法论</span>
-                            </div>
-                            <p class="card-note">熟悉考试大纲，精准把握重难点</p>
-                        </div>
-                    </div>
-                    <div class="tutoring-card">
-                        <div class="card-header computer">
-                            <div class="header-bg"></div>
-                            <span class="icon"><svg><use href="#icon-laptop"/></svg></span>
-                            <h3>计算机专升本</h3>
-                        </div>
-                        <div class="card-body">
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>C语言程序设计</span>
-                            </div>
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>数据结构</span>
-                            </div>
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>计算机网络</span>
-                            </div>
-                            <div class="subject-item">
-                                <span class="icon"><svg><use href="#icon-check"/></svg></span>
-                                <span>操作系统</span>
-                            </div>
-                            <p class="card-note">注重实践，代码讲解清晰易懂</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- 教育背景 -->
-            <section class="section education-bg">
-                <h2 class="main-section-title">
-                    <span class="title-icon"><span class="icon"><svg><use href="#icon-cap"/></svg></span></span>
-                    <span>教育背景</span>
-                    <span class="title-line"></span>
-                </h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span class="icon"><svg><use href="#icon-award"/></svg></span>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="time-range">2017.09 - 2020.12</div>
-                            <h3>长春师范大学</h3>
-                            <p class="degree">硕士 · 职业技术教育（信息技术）</p>
-                            <p class="edu-detail">深入研究职业教育教学方法，完成多项教学改革课题</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker">
-                            <span class="icon"><svg><use href="#icon-cap"/></svg></span>
-                        </div>
-                        <div class="timeline-content">
-                            <div class="time-range">2009.09 - 2013.06</div>
-                            <h3>长春师范大学</h3>
-                            <p class="degree">本科 · 计算机科学与技术</p>
-                            <p class="edu-detail">系统学习计算机专业核心课程，奠定扎实技术基础</p>
-                        </div>
+                    <div class="advantage-card">
+                        <div class="adv-icon"><span class="icon"><svg><use href="#icon-heart"/></svg></span></div>
+                        <h3>心理咨询资质</h3>
+                        <p>关注学生心理状态，提供学业规划与激励</p>
                     </div>
                 </div>
             </section>
@@ -2584,16 +2647,19 @@ body {
                 </h2>
                 <div class="work-list">
                     <div class="work-item current">
-                        <div class="work-badge">当前</div>
                         <div class="work-header">
                             <h3>某区域重点学校</h3>
-                            <span class="work-time">2024.08 - 至今</span>
+                            <div class="work-time-wrapper">
+                                <span class="work-time">2024.08 - 至今</span>
+                                <span class="work-badge">当前</span>
+                            </div>
                         </div>
                         <p class="work-position">信息技术教师</p>
                         <ul class="work-duties">
-                            <li>负责信息技术课程日常教学，班级平均成绩提升显著</li>
-                            <li>参与学校信息化建设项目，推动教学数字化转型</li>
-                            <li>组织学生参加信息技术竞赛，多名学生获得省市级奖项</li>
+                            <li>独立承担全年级信息技术课程教学任务，通过分层教学策略解决学生基础差异大的问题，班级平均成绩提升18%</li>
+                            <li>主导设计并实施"智慧课堂"项目，将传统教学与数字化工具融合，学生课堂参与度提升40%，获校级教学创新奖</li>
+                            <li>组织并辅导学生参加省市级信息技术竞赛，8名学生获省级奖项，3名学生获市级一等奖</li>
+                            <li>针对学生编程学习困难，开发图形化编程过渡课程，降低学习门槛，学生编程兴趣显著提高</li>
                         </ul>
                     </div>
                     <div class="work-item">
@@ -2603,10 +2669,11 @@ body {
                         </div>
                         <p class="work-position">计算机教师</p>
                         <ul class="work-duties">
-                            <li>主讲《计算机应用基础》《C语言程序设计》等课程</li>
-                            <li>采用任务驱动教学法，学生实操能力大幅提升</li>
-                            <li>参与课程思政建设，将职业素养融入专业教学</li>
-                            <li>指导学生考取计算机等级证书，通过率达85%以上</li>
+                            <li>主讲《计算机应用基础》《C语言程序设计》《数据库原理》等核心课程，累计授课超1200学时，学生评教连续4学期优秀</li>
+                            <li>创新采用"任务驱动+项目实战"教学法，解决高职学生理论与实践脱节问题，学生实操考核通过率从68%提升至92%</li>
+                            <li>主持课程思政教学改革项目，将工匠精神、职业道德融入专业教学，教学案例被评为校级优秀思政案例</li>
+                            <li>建立"证课融通"培养体系，系统辅导学生备考计算机等级证书，累计指导300余名学生，通过率达85%以上</li>
+                            <li>参与校企合作项目，引入企业真实案例进课堂，帮助学生提前适应职场需求，毕业生就业对口率显著提高</li>
                         </ul>
                     </div>
                     <div class="work-item">
@@ -2616,9 +2683,10 @@ body {
                         </div>
                         <p class="work-position">教师</p>
                         <ul class="work-duties">
-                            <li>从事基础教育教学工作，培养学生良好学习习惯</li>
-                            <li>积累了丰富的课堂管理和学生沟通经验</li>
-                            <li>多次获得"优秀教师"荣誉称号</li>
+                            <li>担任班主任工作，运用教育心理学知识解决学生行为习惯问题，班级纪律评比连续两年获年级第一</li>
+                            <li>针对后进生学习困难，建立"一对一帮扶"机制，通过个性化辅导帮助12名学生成绩显著进步</li>
+                            <li>积极参与教研活动，承担公开课教学任务，教学设计获区级教学比赛二等奖</li>
+                            <li>与家长保持密切沟通，建立家校协同育人机制，获得家长高度认可，连续3年获"优秀教师"荣誉称号</li>
                         </ul>
                     </div>
                 </div>
@@ -2713,59 +2781,60 @@ body {
     <div class="code-rain" id="codeRain"></div>
 
     <script>
-    // 流星效果生成 - 整个页面随机分布
+    // 流星效果生成 - 覆盖整个页面
     (function() {
         const meteorsContainer = document.getElementById('meteors');
-        const meteorCount = 10;  // 数量减半
+        const meteorCount = 12;
         
         for (let i = 0; i < meteorCount; i++) {
             const meteor = document.createElement('div');
             meteor.className = 'meteor';
             
-            // 速度变慢30%（时间增加43%）
             const speed = Math.random();
             let duration;
             if (speed < 0.15) {
-                duration = 2 + Math.random() * 3;     // 极快：2-5秒
+                duration = 3 + Math.random() * 4;
             } else if (speed < 0.35) {
-                duration = 5.7 + Math.random() * 5.7; // 快：5.7-11.4秒
+                duration = 7 + Math.random() * 6;
             } else if (speed < 0.7) {
-                duration = 11.4 + Math.random() * 11.5; // 中：11.4-23秒
+                duration = 13 + Math.random() * 12;
             } else {
-                duration = 23 + Math.random() * 20;   // 慢：23-43秒
+                duration = 25 + Math.random() * 20;
             }
             meteor.style.animationDuration = duration + 's';
             
-            // 延迟：前3颗立即开始，其余延迟
-            const delay = i < 3 ? Math.random() * 2 : Math.random() * 25;
+            const delay = i < 4 ? Math.random() * 2 : Math.random() * 25;
             meteor.style.animationDelay = delay + 's';
             
-            // 尾巴长度变化：50-300px（差异更大）
-            const tailLength = 50 + Math.random() * 250;
+            const tailLength = 50 + Math.random() * 200;
             meteor.style.setProperty('--tail-length', tailLength + 'px');
             
-            // 头部大小：3-10px
-            const headSize = 3 + Math.random() * 7;
+            const headSize = 3 + Math.random() * 5;
             meteor.style.setProperty('--head-size', headSize + 'px');
             
-            // 亮度变化：0.2 - 1.0（更大差异）
-            const opacity = 0.2 + Math.random() * 0.8;
+            const opacity = 0.3 + Math.random() * 0.7;
             meteor.style.setProperty('--meteor-opacity', opacity);
             
-            // 随机起始位置 - 整个页面范围
-            // 为了从右上到左下，起点要在右边或上边
-            // 使用对角线分布，确保覆盖整个页面
-            const angle = Math.random(); // 0-1 决定在哪个边开始
+            // 起始位置分布：整个页面都能看到流星划过
+            const zone = Math.random();
             let startX, startY;
             
-            if (angle < 0.5) {
-                // 从右边进入（x在100-120%，y在-20%到80%）
+            if (zone < 0.25) {
+                // 从右边进入 - 流星划过页面右侧和中间区域
                 startX = 100 + Math.random() * 20;
-                startY = -20 + Math.random() * 100;
+                startY = -20 + Math.random() * 80;
+            } else if (zone < 0.5) {
+                // 从上边右侧区域进入 - 流星划过页面中右区域
+                startX = 60 + Math.random() * 60;
+                startY = -30 + Math.random() * 20;
+            } else if (zone < 0.75) {
+                // 从上边中间区域进入 - 流星划过页面中间和左侧区域
+                startX = 30 + Math.random() * 40;
+                startY = -30 + Math.random() * 20;
             } else {
-                // 从上边进入（x在20-120%，y在-20%到0%）
-                startX = 20 + Math.random() * 100;
-                startY = -20 + Math.random() * 20;
+                // 从上边左侧区域进入 - 流星划过页面左上角区域
+                startX = 10 + Math.random() * 30;
+                startY = -30 + Math.random() * 30;
             }
             
             meteor.style.setProperty('--start-x', startX + '%');
@@ -2775,59 +2844,51 @@ body {
         }
     })();
 
-    // 代码雨效果生成 - 3D旋转
+    // 代码雨效果生成
     (function() {
         const codeRainContainer = document.getElementById('codeRain');
         const chars = '01';
-        const columnCount = 30;
+        const columnCount = 25;
         
         for (let i = 0; i < columnCount; i++) {
             const column = document.createElement('div');
             column.className = 'code-column';
             column.style.left = (i * (100 / columnCount) + Math.random() * 2) + '%';
             
-            // 下落速度差异大：快的5秒，慢的35秒
             const speed = Math.random();
             let duration;
             if (speed < 0.2) {
-                duration = 5 + Math.random() * 5;   // 快：5-10秒
+                duration = 6 + Math.random() * 5;
             } else if (speed < 0.5) {
-                duration = 10 + Math.random() * 8;  // 中：10-18秒
+                duration = 11 + Math.random() * 8;
             } else {
-                duration = 18 + Math.random() * 17; // 慢：18-35秒
+                duration = 19 + Math.random() * 16;
             }
             column.style.animationDuration = duration + 's';
             
-            // 部分立即开始，部分延迟
-            const delay = i < 10 ? Math.random() * 2 : Math.random() * 15;
+            const delay = i < 8 ? Math.random() * 2 : Math.random() * 12;
             column.style.animationDelay = delay + 's';
             
-            // 字体大小变化
-            const fontSize = Math.random() * 8 + 12;
+            const fontSize = Math.random() * 6 + 12;
             column.style.fontSize = fontSize + 'px';
             
-            // 亮度变化：0.08 - 0.3
-            column.style.opacity = Math.random() * 0.22 + 0.08;
+            column.style.opacity = Math.random() * 0.2 + 0.06;
             
-            // 生成字符，每个用span包裹
-            const length = Math.floor(Math.random() * 20 + 15);
+            const length = Math.floor(Math.random() * 18 + 12);
             for (let j = 0; j < length; j++) {
                 const span = document.createElement('span');
                 span.textContent = chars[Math.floor(Math.random() * chars.length)];
                 
-                // 每个字符旋转速度不同：1.5-4秒
                 const rotateSpeed = 1.5 + Math.random() * 2.5;
                 
-                // 随机闪光：约15%的字符会闪光
-                if (Math.random() < 0.15) {
+                if (Math.random() < 0.12) {
                     span.className = 'flash';
-                    const flashSpeed = 0.3 + Math.random() * 1.2; // 闪光速度0.3-1.5秒
+                    const flashSpeed = 0.3 + Math.random() * 1;
                     span.style.animationDuration = rotateSpeed + 's, ' + flashSpeed + 's';
                 } else {
                     span.style.animationDuration = rotateSpeed + 's';
                 }
                 
-                // 错开旋转起始位置
                 span.style.animationDelay = (Math.random() * rotateSpeed) + 's';
                 
                 column.appendChild(span);
