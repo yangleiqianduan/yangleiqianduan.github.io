@@ -1020,67 +1020,107 @@ body {
     gap: 16px;
 }
 
-/* 技能词云样式 */
-.skill-cloud {
+/* 3D技能球样式 */
+.skill-sphere-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.skill-sphere-container {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+    overflow: visible;
+    position: relative;
+    margin: 15px 0;
+}
+
+.skill-sphere {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.sphere-canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+/* 关键词列表 */
+.skill-keywords {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 3px 5px;
-    padding: 6px 3px;
-    min-height: 90px;
+    gap: 4px 8px;
+    padding: 0 5px;
+    max-width: 100%;
 }
 
-.skill-cloud .tag {
-    display: inline-block;
-    padding: 2px 5px;
-    border-radius: 3px;
-    transition: all 0.3s ease;
-    cursor: default;
+.skill-keywords span {
+    font-size: 9px;
+    color: rgba(180, 180, 180, 0.7);
     white-space: nowrap;
-    background: transparent;
 }
 
-/* 核心关键词 - 最大最亮 */
-.skill-cloud .tag.xl {
-    font-size: 13px;
+.skill-keywords span::after {
+    content: '·';
+    margin-left: 8px;
+    color: rgba(150, 150, 150, 0.5);
+}
+
+.skill-keywords span:last-child::after {
+    content: '';
+    margin-left: 0;
+}
+
+.skill-sphere .tag {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-style: preserve-3d;
+    white-space: nowrap;
+    cursor: default;
+    transition: color 0.3s, text-shadow 0.3s;
+    backface-visibility: visible;
+}
+
+.skill-sphere .tag.xl {
+    font-size: 14px;
     font-weight: 600;
-    color: var(--accent-color);
-    text-shadow: 0 0 8px rgba(0, 255, 200, 0.5);
 }
 
-/* 重要关键词 - 大号 */
-.skill-cloud .tag.lg {
-    font-size: 11px;
+.skill-sphere .tag.lg {
+    font-size: 12px;
     font-weight: 500;
-    color: rgba(0, 255, 200, 0.9);
 }
 
-/* 常规关键词 - 中号 */
-.skill-cloud .tag.md {
+.skill-sphere .tag.md {
     font-size: 10px;
     font-weight: 400;
-    color: rgba(0, 255, 200, 0.7);
 }
 
-/* 辅助关键词 - 小号 */
-.skill-cloud .tag.sm {
-    font-size: 8px;
+.skill-sphere .tag.sm {
+    font-size: 9px;
     font-weight: 400;
-    color: rgba(0, 255, 200, 0.5);
 }
 
-/* 填充词 - 最小 */
-.skill-cloud .tag.xs {
-    font-size: 7px;
+.skill-sphere .tag.xs {
+    font-size: 8px;
     font-weight: 300;
-    color: rgba(0, 255, 200, 0.35);
 }
 
-.skill-cloud .tag:hover {
-    color: var(--accent-color) !important;
-    text-shadow: 0 0 15px rgba(0, 255, 200, 0.6);
-    transform: scale(1.1);
+.skill-sphere .tag:hover {
+    color: #fff !important;
+    text-shadow: 0 0 20px rgba(0, 255, 200, 0.8), 0 0 30px rgba(0, 255, 200, 0.5);
 }
 
 .skill-item {
@@ -2574,37 +2614,23 @@ body {
 
             <div class="skills-section">
                 <h2 class="section-title"><span class="icon"><svg><use href="#icon-chip"/></svg></span> 核心技能</h2>
-                <div class="skill-cloud">
-                    <span class="tag sm">数据库</span>
-                    <span class="tag xl">信息技术</span>
-                    <span class="tag xs">网络</span>
-                    <span class="tag md">课件制作</span>
-                    <span class="tag sm">编程</span>
-                    <span class="tag lg">Python</span>
-                    <span class="tag xs">算法</span>
-                    <span class="tag md">操作系统</span>
-                    <span class="tag xl">教学设计</span>
-                    <span class="tag sm">Office</span>
-                    <span class="tag xs">数据库</span>
-                    <span class="tag lg">数据结构</span>
-                    <span class="tag sm">教育学</span>
-                    <span class="tag md">计算机网络</span>
-                    <span class="tag xs">课堂</span>
-                    <span class="tag lg">课堂管理</span>
-                    <span class="tag sm">多媒体</span>
-                    <span class="tag xs">Python</span>
-                    <span class="tag md">图形化编程</span>
-                    <span class="tag xl">编程教学</span>
-                    <span class="tag xs">Office</span>
-                    <span class="tag sm">网络基础</span>
-                    <span class="tag lg">信息素养</span>
-                    <span class="tag xs">教学</span>
-                    <span class="tag md">数据库基础</span>
-                    <span class="tag sm">Scratch</span>
-                    <span class="tag xs">系统</span>
-                    <span class="tag md">教研能力</span>
-                    <span class="tag xs">课件</span>
-                    <span class="tag sm">计算思维</span>
+                <div class="skill-sphere-wrapper">
+                    <div class="skill-sphere-container">
+                        <canvas class="sphere-canvas" id="sphereCanvas" width="220" height="220"></canvas>
+                        <div class="skill-sphere" id="skillSphere"></div>
+                    </div>
+                    <div class="skill-keywords">
+                        <span>信息技术</span>
+                        <span>教学设计</span>
+                        <span>编程教学</span>
+                        <span>AI应用</span>
+                        <span>Python</span>
+                        <span>数据结构</span>
+                        <span>课堂管理</span>
+                        <span>计算机网络</span>
+                        <span>Office</span>
+                        <span>Scratch</span>
+                    </div>
                 </div>
             </div>
         </aside>
@@ -2961,6 +2987,192 @@ body {
             
             codeRainContainer.appendChild(column);
         }
+    })();
+
+    // 3D技能球旋转效果
+    (function() {
+        const sphere = document.getElementById('skillSphere');
+        const canvas = document.getElementById('sphereCanvas');
+        if (!sphere || !canvas) return;
+        
+        const ctx = canvas.getContext('2d');
+        const radius = 90;
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+        
+        // 技能关键词列表
+        const skills = [
+            { text: '信息技术', weight: 4 },
+            { text: '教学设计', weight: 4 },
+            { text: '编程教学', weight: 4 },
+            { text: 'AI应用', weight: 4 },
+            { text: 'Python', weight: 3 },
+            { text: '数据结构', weight: 3 },
+            { text: '课堂管理', weight: 3 },
+            { text: '信息素养', weight: 3 },
+            { text: '课件制作', weight: 2 },
+            { text: '操作系统', weight: 2 },
+            { text: '计算机网络', weight: 2 },
+            { text: '图形化编程', weight: 2 },
+            { text: 'Office', weight: 2 },
+            { text: 'Scratch', weight: 1 },
+            { text: '多媒体', weight: 1 },
+            { text: '数据库', weight: 1 }
+        ];
+        
+        // 动态创建标签
+        skills.forEach((skill, i) => {
+            const tag = document.createElement('span');
+            tag.className = 'tag ' + (skill.weight >= 4 ? 'xl' : skill.weight >= 3 ? 'lg' : skill.weight >= 2 ? 'md' : 'sm');
+            tag.dataset.weight = skill.weight;
+            tag.textContent = skill.text;
+            sphere.appendChild(tag);
+        });
+        
+        const tags = sphere.querySelectorAll('.tag');
+        const tagCount = tags.length;
+        
+        // 球面骨架顶点（经纬线交点）
+        const wireframePoints = [];
+        const latLines = 4;
+        const lonLines = 8;
+        
+        for (let lat = 0; lat <= latLines; lat++) {
+            const phi = (lat / latLines) * Math.PI;
+            for (let lon = 0; lon < lonLines; lon++) {
+                const theta = (lon / lonLines) * 2 * Math.PI;
+                wireframePoints.push({
+                    x: radius * Math.sin(phi) * Math.cos(theta),
+                    y: radius * Math.cos(phi),
+                    z: radius * Math.sin(phi) * Math.sin(theta),
+                    lat: lat,
+                    lon: lon
+                });
+            }
+        }
+        
+        // 使用斐波那契球面分布算法均匀分布标签
+        const positions = [];
+        const goldenRatio = (1 + Math.sqrt(5)) / 2;
+        
+        for (let i = 0; i < tagCount; i++) {
+            const y = 1 - (i / (tagCount - 1)) * 2;
+            const radiusAtY = Math.sqrt(1 - y * y);
+            const theta = 2 * Math.PI * i / goldenRatio;
+            
+            positions.push({
+                x: Math.cos(theta) * radiusAtY * radius,
+                y: y * radius,
+                z: Math.sin(theta) * radiusAtY * radius
+            });
+        }
+        
+        // 初始化标签位置
+        tags.forEach((tag, i) => {
+            tag._baseX = positions[i].x;
+            tag._baseY = positions[i].y;
+            tag._baseZ = positions[i].z;
+        });
+        
+        let angleX = 0;
+        let angleY = 0;
+        const speed = 0.004;
+        
+        function rotatePoint(x, y, z, cosX, sinX, cosY, sinY) {
+            const x1 = x * cosY - z * sinY;
+            const z1 = x * sinY + z * cosY;
+            const y2 = y * cosX - z1 * sinX;
+            const z2 = y * sinX + z1 * cosX;
+            return { x: x1, y: y2, z: z2 };
+        }
+        
+        function drawWireframe(cosX, sinX, cosY, sinY) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // 计算旋转后的骨架点
+            const rotatedPoints = wireframePoints.map(p => {
+                const rp = rotatePoint(p.x, p.y, p.z, cosX, sinX, cosY, sinY);
+                return { ...rp, lat: p.lat, lon: p.lon };
+            });
+            
+            ctx.strokeStyle = 'rgba(0, 255, 200, 0.08)';
+            ctx.lineWidth = 1;
+            
+            // 画纬线
+            for (let lat = 0; lat <= latLines; lat++) {
+                ctx.beginPath();
+                const latPoints = rotatedPoints.filter(p => p.lat === lat);
+                latPoints.forEach((p, i) => {
+                    const screenX = centerX + p.x;
+                    const screenY = centerY + p.y;
+                    if (i === 0) ctx.moveTo(screenX, screenY);
+                    else ctx.lineTo(screenX, screenY);
+                });
+                if (latPoints.length > 0) {
+                    ctx.lineTo(centerX + latPoints[0].x, centerY + latPoints[0].y);
+                }
+                ctx.stroke();
+            }
+            
+            // 画经线
+            for (let lon = 0; lon < lonLines; lon++) {
+                ctx.beginPath();
+                const lonPoints = rotatedPoints.filter(p => p.lon === lon).sort((a, b) => a.lat - b.lat);
+                lonPoints.forEach((p, i) => {
+                    const screenX = centerX + p.x;
+                    const screenY = centerY + p.y;
+                    if (i === 0) ctx.moveTo(screenX, screenY);
+                    else ctx.lineTo(screenX, screenY);
+                });
+                ctx.stroke();
+            }
+        }
+        
+        function updatePositions() {
+            angleY += speed;
+            angleX += speed * 0.3;
+            
+            const cosX = Math.cos(angleX);
+            const sinX = Math.sin(angleX);
+            const cosY = Math.cos(angleY);
+            const sinY = Math.sin(angleY);
+            
+            // 画骨架
+            drawWireframe(cosX, sinX, cosY, sinY);
+            
+            tags.forEach((tag) => {
+                const rp = rotatePoint(tag._baseX, tag._baseY, tag._baseZ, cosX, sinX, cosY, sinY);
+                
+                const scale = (rp.z + radius * 1.5) / (radius * 3);
+                const opacity = Math.max(0.2, Math.min(1, scale * 1.2));
+                const weight = parseInt(tag.dataset.weight) || 0;
+                
+                let color;
+                if (weight >= 4) {
+                    color = `rgba(0, 255, 200, ${opacity})`;
+                } else if (weight >= 3) {
+                    color = `rgba(0, 255, 200, ${opacity * 0.85})`;
+                } else if (weight >= 2) {
+                    color = `rgba(0, 255, 200, ${opacity * 0.7})`;
+                } else {
+                    color = `rgba(0, 255, 200, ${opacity * 0.55})`;
+                }
+                
+                tag.style.transform = `translate(-50%, -50%) translate3d(${rp.x}px, ${rp.y}px, ${rp.z}px)`;
+                tag.style.color = color;
+                tag.style.zIndex = Math.round(rp.z + 100);
+                
+                if (rp.z > 20) {
+                    tag.style.textShadow = `0 0 ${8 * scale}px rgba(0, 255, 200, ${opacity * 0.5})`;
+                } else {
+                    tag.style.textShadow = 'none';
+                }
+            });
+            
+            requestAnimationFrame(updatePositions);
+        }
+        
+        updatePositions();
     })();
     </script>
 </body>
